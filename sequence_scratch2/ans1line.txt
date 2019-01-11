@@ -1,0 +1,3 @@
+\noindent \rule{19cm}{0.4pt} \\ \\
+\rule{19cm}{0.4pt} \\ \\
+\rule{19cm}{0.4pt}

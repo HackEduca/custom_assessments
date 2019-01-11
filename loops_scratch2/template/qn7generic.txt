@@ -1,0 +1,6 @@
+\noindent 7. How do you know that you should use a loop? \\ \\
+\noindent \rule{18.5cm}{0.5pt} \\ \\
+\noindent \rule{18.5cm}{0.5pt} \\ \\
+\noindent \rule{18.5cm}{0.5pt} \\
+
+\noindent \dotfill \\

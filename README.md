@@ -1,2 +1,2 @@
-# custom_assessments
-Custom Assessment Generator for Scratch Act 1, Green and Blue Workbook
+# scratch_assessments
+Automatic Assessment Generator for Scratch at UChicago

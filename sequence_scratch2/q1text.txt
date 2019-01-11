@@ -1,0 +1,4 @@
+ 
+\noindent \dotfill \\
+
+\noindent The scripts below belong to a sprite named Cat: \\

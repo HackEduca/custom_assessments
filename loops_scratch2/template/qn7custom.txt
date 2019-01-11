@@ -1,0 +1,15 @@
+\begin{center}
+\includegraphics[scale=.4]{q7_script0.png}
+\end{center}
+\noindent 7a. Why did you choose to use a loop? \\ \\
+\noindent \rule{18.5cm}{0.5pt} \\ \\
+\noindent \rule{18.5cm}{0.5pt} \\ \\
+\noindent \rule{18.5cm}{0.5pt} \\ \\
+\noindent 7b. How did you decide how many iterations (the number in the repeat loop)? \\ \\
+\noindent \rule{18.5cm}{0.5pt} \\ \\
+\noindent \rule{18.5cm}{0.5pt} \\ \\
+\noindent \rule{18.5cm}{0.5pt} \\
+
+\noindent \dotfill \\
+Please turn the page; there is one more question!
+\newpage

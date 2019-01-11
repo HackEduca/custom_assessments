@@ -1,0 +1,3 @@
+\noindent First, \hrulefill . \\ \\
+Next, \hrulefill . \\ \\
+Last, \hrulefill . \\ \\

@@ -1,0 +1,9 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[letterpaper, portrait, margin=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage[export]{adjustbox}
+\graphicspath{{images/}{
