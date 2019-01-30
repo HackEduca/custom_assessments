@@ -61,16 +61,6 @@ def make_question(name):
 
 
 def main():
-	# with open('ag428203.json') as f:
-	# 	data = json.load(f)
-	
-	# for item in data['targets']:
-	# 	blocks = item['blocks']
-	# 	for blockName in blocks:
-	# 		blockInfo=blocks[blockName]
-	# 		opcode = blockInfo['opcode']
-	# 		print(blockInfo)
-	# 		print("\n")
 
 	#Create a global lists of projects
 	projects = []
@@ -129,6 +119,7 @@ def main():
 				blocks = item['blocks']
 				for blockName in blocks:
 					blockInfo=blocks[blockName]
+					#Add to projects' blocks dictionary: key=blockName, value=blockInfo
 					newProject.blocks[blockName] = blockInfo
 				
 
