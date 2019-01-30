@@ -1,0 +1,157 @@
+{
+	"objName": "Stage",
+	"sounds": [{
+			"soundName": "pop",
+			"soundID": 0,
+			"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+			"sampleCount": 258,
+			"rate": 11025,
+			"format": ""
+		}],
+	"costumes": [{
+			"costumeName": "Scene 1",
+			"baseLayerID": 6,
+			"baseLayerMD5": "dfc5c836b63025b6bd3999e48383f7e4.png",
+			"bitmapResolution": 2,
+			"rotationCenterX": 480,
+			"rotationCenterY": 360
+		}],
+	"currentCostumeIndex": 0,
+	"penLayerMD5": "5c81a336fab8be57adc039a8a2b33ca9.png",
+	"penLayerID": 0,
+	"tempoBPM": 60,
+	"videoAlpha": 0.5,
+	"children": [{
+			"objName": "Choose",
+			"scripts": [[27,
+					5,
+					[["whenGreenFlag"],
+						["clearPenTrails"],
+						["setSizeTo:", 50],
+						["doForever",
+							[["stampCostume"],
+								["forward:", 5],
+								["changeGraphicEffect:by:", "color", 5],
+								["pointTowards:", "_mouse_"],
+								["turnRight:", ["randomFrom:to:", -30, 30]],
+								["bounceOffEdge"]]]]],
+				[31, 276, [["whenKeyPressed", "space"], ["nextCostume"]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "gobo",
+					"baseLayerID": 1,
+					"baseLayerMD5": "c3783d3dbb7d9951492453ce10b580ea.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 75,
+					"rotationCenterY": 82
+				},
+				{
+					"costumeName": "nano-a",
+					"baseLayerID": 2,
+					"baseLayerMD5": "02c5433118f508038484bbc5b111e187.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 61,
+					"rotationCenterY": 60
+				},
+				{
+					"costumeName": "Costume",
+					"baseLayerID": 3,
+					"baseLayerMD5": "518d37b911e3b8057364c4f2bbe14f30.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 40,
+					"rotationCenterY": 40
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 4.035235627217792,
+			"scratchY": 112.92049108797045,
+			"scale": 0.5,
+			"direction": 68.18476743618893,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 1,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Clear button",
+			"scripts": [[34, 50, [["whenClicked"], ["clearPenTrails"]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "button2-a",
+					"baseLayerID": 4,
+					"baseLayerMD5": "613a298afc824156b3b09c928215d2be.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 59,
+					"rotationCenterY": 30
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 198,
+			"scratchY": -162,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 2,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Sprite1",
+			"scripts": [[26,
+					16,
+					[["whenGreenFlag"], ["comeToFront"], ["show"], ["wait:elapsed:from:", 5], ["hide"]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "costume1",
+					"baseLayerID": 5,
+					"baseLayerMD5": "58910db911054646ea02c8d0a11a2556.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 163,
+					"rotationCenterY": 106
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -10,
+			"scratchY": 53,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 3,
+			"visible": false,
+			"spriteInfo": {
+			}
+		}],
+	"info": {
+		"flashVersion": "LNX 26,0,0,137",
+		"hasCloudData": false,
+		"scriptCount": 4,
+		"spriteCount": 3,
+		"projectID": "10015857",
+		"swfVersion": "v456",
+		"videoOn": false,
+		"userAgent": "Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/55.0.2883.87 Safari\/537.36"
+	}
+}
