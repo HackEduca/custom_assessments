@@ -84,45 +84,45 @@ def create_script(blocks, blockID):
 
 
 
-def main():
-	# Enter some arbitrary project json file to test functions as cmd line argument
-	json_file = sys.argv[1]
+# def main():
+# 	# Enter some arbitrary project json file to test functions as cmd line argument
+# 	json_file = sys.argv[1]
 
-	with open(json_file) as f:
-		data = json.load(f)
+# 	with open(json_file) as f:
+# 		data = json.load(f)
 	
-	#Scratch 3 json file is a giant multinested dictionary.
-	#First layer has one key: 'targets'
-	#Value is all the project informaton (mostly sprites, & some internal Scratch specs) 
-	projInfo = data['targets']
+# 	#Scratch 3 json file is a giant multinested dictionary.
+# 	#First layer has one key: 'targets'
+# 	#Value is all the project informaton (mostly sprites, & some internal Scratch specs) 
+# 	projInfo = data['targets']
 
-	#Pull out all the blocks from a project
-	all_blocks = {}
-	for item in projInfo:
-		blocks = item['blocks']
-		for blockName in blocks:
-			blockInfo=blocks[blockName]
-			#Add to all_blocks dictionary: key=blockName, value=blockInfo
-			all_blocks[blockName] = blockInfo
+# 	#Pull out all the blocks from a project
+# 	all_blocks = {}
+# 	for item in projInfo:
+# 		blocks = item['blocks']
+# 		for blockName in blocks:
+# 			blockInfo=blocks[blockName]
+# 			#Add to all_blocks dictionary: key=blockName, value=blockInfo
+# 			all_blocks[blockName] = blockInfo
 
-	#Test count_blocks function
-	#print(count_blocks(all_blocks,'event_whenthisspriteclicked'))
+# 	#Test count_blocks function
+# 	#print(count_blocks(all_blocks,'event_whenthisspriteclicked'))
 
-	#Test find_blocks function
-	sprite_clicked = find_blocks(all_blocks,'event_whenthisspriteclicked')
-	# for item in sprite_clicked:
-	# 	print(item)
+# 	#Test find_blocks function
+# 	sprite_clicked = find_blocks(all_blocks,'event_whenthisspriteclicked')
+# 	# for item in sprite_clicked:
+# 	# 	print(item)
 	
-	#Test create scripts 
-	all_scripts = [] #List of scripts, which will be dictionaries
-	for item in sprite_clicked:
-		script = create_script(all_blocks,item)
-		if len(script)>0:
-			all_scripts.append(script)
+# 	#Test create scripts 
+# 	all_scripts = [] #List of scripts, which will be dictionaries
+# 	for item in sprite_clicked:
+# 		script = create_script(all_blocks,item)
+# 		if len(script)>0:
+# 			all_scripts.append(script)
 
-	for item in all_scripts:
-		print(item)
-		print('\n')
+# 	for item in all_scripts:
+# 		print(item)
+# 		print('\n')
 
-if __name__ == '__main__':
-	main()
+# if __name__ == '__main__':
+# 	main()
