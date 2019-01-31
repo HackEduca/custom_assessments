@@ -63,19 +63,56 @@ def make_question(name):
 #Custom question functions. TODO: Add excluded opcodes
 #Question 3: Find 1 green flag script, 1 spriteClicked, or 1 keyPressed from their code. Hard-code 1 spriteClicked script.
 #Check if 3-4 blocks long, including the hat block, and no excluded blocks.
+#Takes in project and creates a custom question for project
 #def custom_q3(Question, Project):
 
 
 #Question 6: Find a "When Green Flag". No loops, conditionals, variables, play sound.
 #Check if 4 blocks long, including the GF block, and no excluded blocks.
-#Takes in project and adds custom question to project
+#Takes in project and creates a custom question for project
 #def custom_q6(Project):
 
 
 #Question 7: Find a spriteClicked or GreenFlag. No loops, conditionals, variables, play sound.
 #Check if 2-4 blocks long, including the GF block, and no excluded blocks.
-#Takes in project and adds custom question to project
+#Takes in project and creates a custom question for project
 #def custom_q7(Project):
+
+#Function to decide which projects get custom code.
+#Args: Set of all candidate projects, sets & csv files for custom projects & non custom projects,
+def decide_custom(candidates, custom, noCustom,csvCustom,csvNoCustom):
+	candidates = list(candidates)
+	if len(candidates) > 0:
+		#If list is even, shuffle and split in half.
+		if len(candidates)%2==0:
+			random.shuffle(candidates)
+			for x in range(0, len(candidates)):
+				if x < len(candidates)/2: #First half gets noncustom question
+					noCustom.add(candidates[x])
+					print>>csvNoCustom, candidates[x].username+','+candidates[x].ID
+				else:
+					custom.add(candidates[x])
+					print>>csvCustom, candidates[x].username+','+candidates[x].ID
+		else:
+			random.shuffle(candidates)
+			for x in range(0, len(candidates)-1):
+				if x < len(candidates)/2: #First half gets noncustom question
+					noCustom.add(candidates[x])
+					print>>csvNoCustom, candidates[x].username+','+candidates[x].ID
+				else:
+					custom.add(candidates[x])
+					print>>csvCustom, candidates[x].username+','+candidates[x].ID
+			
+			#Last odd element custom/generic is based on timestamp
+			ts = str(time.time())
+			rand_digit = int(ts[random.randint(1,len(ts)-4)])
+			last = len(candidates)-1
+			if rand_digit%2==0: #If even, get a generic question
+				noCustom.add(candidates[last])
+				print>>csvNoCustom, candidates[last].username+','+candidates[last].ID
+			else:
+				custom.add(candidates[x])
+				print>>csvCustom, candidates[last].username+','+candidates[last].ID
 
 
 def main():
@@ -148,10 +185,10 @@ def main():
 		studio_api_url = sa.studio_to_API(studioURL,pageNum)
 		r = requests.get(studio_api_url, allow_redirects=True)
 
-	#List of projects with candidate code for each question
-	q1_cands = [] #Check if 2-4 blocks long, including the hat block, and no excluded blocks. 1 green flag script, 1 spriteClicked, or 1 keyPressed
-	q6_cands = [] #Check if exactly 4 blocks long, including the GF block, and no excluded blocks. Green flag only
-	q7_cands = [] #Check if 2-4 blocks long, including the GF block, and no excluded blocks. spriteClicked or green flag
+	#Set of projects with candidate code for each question
+	q3_cands = set() #Check if 2-4 blocks long, including the hat block, and no excluded blocks. 1 green flag script, 1 spriteClicked, or 1 keyPressed
+	q6_cands = set() #Check if exactly 4 blocks long, including the GF block, and no excluded blocks. Green flag only
+	q7_cands = set() #Check if 2-4 blocks long, including the GF block, and no excluded blocks. spriteClicked or green flag
 
 	#Find projects with candidate code
 	for project in projects:
@@ -164,11 +201,11 @@ def main():
 			for block in greenFlags:
 				gfScript=nj.create_script(project.blocks, block)
 				if len(gfScript)==4:
-					q6_cands.append(project)
+					q6_cands.add(project)
 					break
 				if len(gfScript)>=2 and len(gfScript)<=4:
-					q1_cands.append(project)
-					q7_cands.append(project)
+					q3_cands.add(project)
+					q7_cands.add(project)
 					break
 			
 		#If there are any sprite clicked blocks in the project
@@ -176,10 +213,8 @@ def main():
 			for block in spriteClickeds:
 				spriteScript=nj.create_script(project.blocks, block) 
 				if len(spriteScript)>=2 and len(spriteScript)<=4:
-					if project not in q1_cands:
-						q1_cands.append(project)
-					if project not in q7_cands:
-						q7_cands.append(project)
+					q3_cands.add(project)
+					q7_cands.add(project)
 					break
 
 		#If there are any key pressedblocks in the project
@@ -187,19 +222,58 @@ def main():
 			for block in keyPresseds:
 				keyScript=nj.create_script(project.blocks, block) 
 				if len(keyScript)>=2 and len(keyScript)<=4:
-					if project not in q1_cands:
-						q1_cands.append(project)
+					q3_cands.add(project)
 					break
 
+	#Decide which projects get custom code
+	q3_custom = set()
+	q3_noCustom = set()
+	q3_custom_csv = open('q3_custom.csv','w+')
+	q3_noCustom_csv = open('q3_noCustom.csv','w+')
+	decide_custom(q3_cands, q3_custom, q3_noCustom,q3_custom_csv,q3_noCustom_csv)
 
-	for project in q1_cands:
-		print(project.username)
+	q6_custom = set()
+	q6_noCustom = set()
+	q6_custom_csv = open('q6_custom.csv','w+')
+	q6_noCustom_csv = open('q6_noCustom.csv','w+')
+	decide_custom(q6_cands, q6_custom, q6_noCustom,q6_custom_csv,q6_noCustom_csv)
 
-	for project in q6_cands:
-		print(project.username)
+	q7_custom = set()
+	q7_noCustom = set()
+	q7_custom_csv = open('q7_custom.csv','w+')
+	q7_noCustom_csv = open('q7_noCustom.csv','w+')
+	decide_custom(q7_cands, q7_custom, q7_noCustom,q7_custom_csv,q7_noCustom_csv)
 
-	for project in q7_cands:
+	print("Q3 Custom Projects")
+	for project in q3_custom:
 		print(project.username)
+	print("\n")
+
+	print("Q3 No Custom Projects")
+	for project in q3_noCustom:
+		print(project.username)
+	print("\n")
+
+	print("Q6 Custom Projects")
+	for project in q6_custom:
+		print(project.username)
+	print("\n")
+
+	print("Q6 No Custom Projects")
+	for project in q6_noCustom:
+		print(project.username)
+	print("\n")
+
+	print("Q7 Custom Projects")
+	for project in q7_custom:
+		print(project.username)
+	print("\n")
+
+	print("Q7 No Custom Projects")
+	for project in q7_noCustom:
+		print(project.username)
+	print("\n")
+
 
 
 if __name__ == '__main__':
