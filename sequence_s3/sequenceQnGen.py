@@ -19,6 +19,14 @@ class Project(object):
 	blocks = ''
 	questions = ''
 	username = '' #Scratch username
+	#List of the block IDs of events of interest
+	greenFlags=''
+	spriteClickeds=''
+	keyPresseds=''
+	#List of the scripts of events of interest
+	gfScripts=''
+	scScripts=''
+	kpScripts=''
 	lenQ7 = 4 #Num blocks in q7 script. Default is 4
 
 	def __init__(self, ID):
@@ -26,6 +34,12 @@ class Project(object):
 		self.blocks = {}
 		self.questions = []
 		self.username = ''
+		self.greenFlags=[]
+		self.spriteClickeds=[]
+		self.keyPresseds=[]
+		self.gfScripts=[]
+		self.scScripts=[]
+		self.kpScripts=[]
 		self.lenQ7 = 4
 
 	def __str__(self):
@@ -42,13 +56,10 @@ def make_project(name):
 class Question(object):
 	ID = '' #Question's ID 
 	scripts = [] #Scripts that are part of the question
-	scrBlks= [] #Question scripts converted to Scratchblocks syntax
-
 
 	def __init__(self, ID):
 		self.ID = ID
 		self.scripts = []
-		self.scrBlks = []
 
 	def __str__(self):
 		return "Question ID: "+ self.ID
@@ -64,19 +75,42 @@ def make_question(name):
 #Question 3: Find 1 green flag script, 1 spriteClicked, or 1 keyPressed from their code. Hard-code 1 spriteClicked script.
 #Check if 3-4 blocks long, including the hat block, and no excluded blocks.
 #Takes in project and creates a custom question for project
-#def custom_q3(Question, Project):
+#def customize_q3(project):
 
 
 #Question 6: Find a "When Green Flag". No loops, conditionals, variables, play sound.
 #Check if 4 blocks long, including the GF block, and no excluded blocks.
 #Takes in project and creates a custom question for project
-#def custom_q6(Project):
+def customize_q6(project):
+	q6 = make_question('Question 6')
+	for script in project.gfScripts:
+		#If GF script is exactly 4 blocks long
+		if len(script)==4:
+			q6.scripts.append(script)
+			break
+	project.questions.append(q6)
 
+	
 
 #Question 7: Find a spriteClicked or GreenFlag. No loops, conditionals, variables, play sound.
 #Check if 2-4 blocks long, including the GF block, and no excluded blocks.
 #Takes in project and creates a custom question for project
-#def custom_q7(Project):
+def customize_q7(project):
+	q7 = make_question('Question 7')
+	#If they have sprite clicked scripts
+	if len(project.scScripts)>0:
+		for script in project.scScripts:
+			if len(script)>=2 and len(script)<=4:
+				q7.scripts.append(script)
+				break
+	else: #use a green flag script
+		for script in project.gfScripts:
+			if len(script)>=2 and len(script)<=4:
+				q7.scripts.append(script)
+				break
+	project.questions.append(q7)
+
+
 
 #Function to decide which projects get custom code.
 #Args: Set of all candidate projects, sets & csv files for custom projects & non custom projects,
@@ -192,38 +226,42 @@ def main():
 
 	#Find projects with candidate code
 	for project in projects:
-		greenFlags= nj.find_blocks(project.blocks,'event_whenflagclicked')
-		spriteClickeds = nj.find_blocks(project.blocks,'event_whenthisspriteclicked')
-		keyPresseds = nj.find_blocks(project.blocks,'event_whenkeypressed')
+		project.greenFlags= nj.find_blocks(project.blocks,'event_whenflagclicked')
+		project.spriteClickeds = nj.find_blocks(project.blocks,'event_whenthisspriteclicked')
+		project.keyPresseds = nj.find_blocks(project.blocks,'event_whenkeypressed')
 
 		#If there are any green flag blocks in the project
-		if len(greenFlags) > 0:
-			for block in greenFlags:
+		if len(project.greenFlags) > 0:
+			for block in project.greenFlags:
 				gfScript=nj.create_script(project.blocks, block)
+				project.gfScripts.append(gfScript)
+
 				if len(gfScript)==4:
 					q6_cands.add(project)
-					break
+					
 				if len(gfScript)>=2 and len(gfScript)<=4:
 					q3_cands.add(project)
 					q7_cands.add(project)
-					break
+					
 			
 		#If there are any sprite clicked blocks in the project
-		if len(spriteClickeds) > 0:
-			for block in spriteClickeds:
+		if len(project.spriteClickeds) > 0:
+			for block in project.spriteClickeds:
 				spriteScript=nj.create_script(project.blocks, block) 
+				project.scScripts.append(spriteScript)
 				if len(spriteScript)>=2 and len(spriteScript)<=4:
 					q3_cands.add(project)
 					q7_cands.add(project)
-					break
+					
 
 		#If there are any key pressedblocks in the project
-		if len(keyPresseds) > 0:
-			for block in keyPresseds:
+		if len(project.keyPresseds) > 0:
+			for block in project.keyPresseds:
 				keyScript=nj.create_script(project.blocks, block) 
+				project.kpScripts.append(keyScript)
 				if len(keyScript)>=2 and len(keyScript)<=4:
 					q3_cands.add(project)
-					break
+					
 
 	#Decide which projects get custom code
 	q3_custom = set()
@@ -244,35 +282,19 @@ def main():
 	q7_noCustom_csv = open('q7_noCustom.csv','w+')
 	decide_custom(q7_cands, q7_custom, q7_noCustom,q7_custom_csv,q7_noCustom_csv)
 
-	print("Q3 Custom Projects")
-	for project in q3_custom:
-		print(project.username)
-	print("\n")
-
-	print("Q3 No Custom Projects")
-	for project in q3_noCustom:
-		print(project.username)
-	print("\n")
-
-	print("Q6 Custom Projects")
+	#Create custom questions for chosen projects
 	for project in q6_custom:
-		print(project.username)
-	print("\n")
+		customize_q6(project)
 
-	print("Q6 No Custom Projects")
-	for project in q6_noCustom:
-		print(project.username)
-	print("\n")
-
-	print("Q7 Custom Projects")
 	for project in q7_custom:
+		customize_q7(project)
 		print(project.username)
-	print("\n")
-
-	print("Q7 No Custom Projects")
-	for project in q7_noCustom:
-		print(project.username)
-	print("\n")
+		for question in project.questions:
+			if question.ID == 'Question 7':
+				print(question.ID+" scripts:")
+			for script in question.scripts:
+				print(script)
+				print('\n')
 
 
 
