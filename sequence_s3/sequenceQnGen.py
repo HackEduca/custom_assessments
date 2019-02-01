@@ -73,9 +73,61 @@ def make_question(name):
 
 #Custom question functions. TODO: Add excluded opcodes
 #Question 3: Find 1 green flag script, 1 spriteClicked, or 1 keyPressed from their code. Hard-code 1 spriteClicked script.
-#Check if 3-4 blocks long, including the hat block, and no excluded blocks.
+#Check if 2-4 blocks long, including the hat block, and no excluded blocks.
 #Takes in project and creates a custom question for project
-#def customize_q3(project):
+def customize_q3(project):
+	q3=make_question('Question 3')
+	q3.scripts = [
+	#Sprite clicked generic script
+	{"2bY`2_e=7csW+EwXTmt*":{"opcode":"event_whenthisspriteclicked","next":"1NO^;2u%X1UuOUWv=g@3","parent":None,"inputs":{},"fields":{},"shadow":False,"topLevel":True,"x":31,"y":70},
+	"1NO^;2u%X1UuOUWv=g@3":{"opcode":"looks_thinkforsecs","next":"({Hy9IC?|G1zX7Vg}PD~","parent":"2bY`2_e=7csW+EwXTmt*","inputs":{"MESSAGE":[1,[10,"Hmm..."]],"SECS":[1,[4,"2"]]},"fields":{},"shadow":False,"topLevel":False},
+	"({Hy9IC?|G1zX7Vg}PD~":{"opcode":"looks_nextcostume","next":None,"parent":"1NO^;2u%X1UuOUWv=g@3","inputs":{},"fields":{},"shadow":False,"topLevel":False}},
+	
+	#Key pressed generic script
+	{"|t8aA]$@rWg|sqH9aF*|":{"opcode":"event_whenkeypressed","next":"3_~E+N!i*F7k=nnDArGG","parent":None,"inputs":{},"fields":{"KEY_OPTION":["space",None]},"shadow":False,"topLevel":True,"x":35,"y":288},
+	"3_~E+N!i*F7k=nnDArGG":{"opcode":"sound_playuntildone","next":None,"parent":"|t8aA]$@rWg|sqH9aF*|","inputs":{"SOUND_MENU":[1,"3j^lzgy/7HneNCgKcxB4"]},"fields":{},"shadow":False,"topLevel":False},
+	"3j^lzgy/7HneNCgKcxB4":{"opcode":"sound_sounds_menu","next":None,"parent":"3_~E+N!i*F7k=nnDArGG","inputs":{},"fields":{"SOUND_MENU":["Drum",None]},"shadow":True,"topLevel":False}},
+
+	#First GF generic script
+	{"Jclia0i/TNh|5,RYxc(Q":{"opcode":"event_whenflagclicked","next":"%h@_UWp3nK]|v,HUnze^","parent":None,"inputs":{},"fields":{},"shadow":False,"topLevel":True,"x":31,"y":446},
+	"%h@_UWp3nK]|v,HUnze^":{"opcode":"looks_show","next":"=Jt{3ymiml+o?L*E2eZp","parent":"Jclia0i/TNh|5,RYxc(Q","inputs":{},"fields":{},"shadow":False,"topLevel":False},
+	"=Jt{3ymiml+o?L*E2eZp":{"opcode":"motion_movesteps","next":"){8C;vZSkS;[y$cf*2g$","parent":"%h@_UWp3nK]|v,HUnze^","inputs":{"STEPS":[1,[4,"10"]]},"fields":{},"shadow":False,"topLevel":False},
+	"){8C;vZSkS;[y$cf*2g$":{"opcode":"looks_hide","next":None,"parent":"=Jt{3ymiml+o?L*E2eZp","inputs":{},"fields":{},"shadow":False,"topLevel":False}},
+
+	#Second GF generic script
+	{"GUWjki5uit`:iE@Ma$:i":{"opcode":"event_whenflagclicked","next":"ylXf!!CJ;i=H$?)r7Z^3","parent":None,"inputs":{},"fields":{},"shadow":False,"topLevel":True,"x":24,"y":687},
+	"ylXf!!CJ;i=H$?)r7Z^3":{"opcode":"looks_say","next":"yqe=V4B67J.]I$?l~?y#","parent":"GUWjki5uit`:iE@Ma$:i","inputs":{"MESSAGE":[1,[10,"My name is Kim!"]]},"fields":{},"shadow":False,"topLevel":False},
+	"yqe=V4B67J.]I$?l~?y#":{"opcode":"sound_playuntildone","next":"xW;Q8e$g_IfY4L`!K=mz","parent":"ylXf!!CJ;i=H$?)r7Z^3","inputs":{"SOUND_MENU":[1,"83vG.7=/MQeKg8lNN3HE"]},"fields":{},"shadow":False,"topLevel":False},
+	"83vG.7=/MQeKg8lNN3HE":{"opcode":"sound_sounds_menu","next":None,"parent":"yqe=V4B67J.]I$?l~?y#","inputs":{},"fields":{"SOUND_MENU":["Meow",None]},"shadow":True,"topLevel":False},
+	"xW;Q8e$g_IfY4L`!K=mz":{"opcode":"looks_hide","next":None,"parent":"yqe=V4B67J.]I$?l~?y#","inputs":{},"fields":{},"shadow":False,"topLevel":False}}
+	]
+
+	#If they have sprite clicked scripts
+	if len(project.scScripts)>0:
+		for script in project.scScripts:
+			if len(script)>=2 and len(script)<=4:
+				#Replace generic sprite clicked script
+				q3.scripts[0]=script
+				break
+		
+	#If they have key pressed scripts
+	if len(project.kpScripts)>0: 
+		for script in project.kpScripts:
+			#Replace generic key pressed script 
+			if len(script)>=2 and len(script)<=4:
+				q3.scripts[1]=script
+				break
+
+	#If they have green flag scripts
+	if len(project.gfScripts)>0: 
+		for script in project.gfScripts:
+			#Replace first generic GF script 
+			if len(script)>=2 and len(script)<=4:
+				q3.scripts[2]=script
+				break
+
+	project.questions.append(q3)
+
 
 
 #Question 6: Find a "When Green Flag". No loops, conditionals, variables, play sound.
@@ -283,18 +335,21 @@ def main():
 	decide_custom(q7_cands, q7_custom, q7_noCustom,q7_custom_csv,q7_noCustom_csv)
 
 	#Create custom questions for chosen projects
+	for project in q3_custom:
+		customize_q3(project)
+		print(project.username)
+		for question in project.questions:
+			if question.ID == 'Question 3':
+				print(question.ID+" scripts:")
+			for script in question.scripts:
+				print(script)
+				print('\n')
+
 	for project in q6_custom:
 		customize_q6(project)
 
 	for project in q7_custom:
 		customize_q7(project)
-		print(project.username)
-		for question in project.questions:
-			if question.ID == 'Question 7':
-				print(question.ID+" scripts:")
-			for script in question.scripts:
-				print(script)
-				print('\n')
 
 
 
