@@ -1,0 +1,12 @@
+{'2bY`2_e=7csW+EwXTmt*': {'inputs': {}, 'opcode': 'event_whenthisspriteclicked', 'x': 31, 'parent': None, 'topLevel': True, 'y': 70, 'fields': {}, 'shadow': False, 'next': '1NO^;2u%X1UuOUWv=g@3'}, '1NO^;2u%X1UuOUWv=g@3': {'inputs': {'MESSAGE': [1, [10, 'Hmm...']], 'SECS': [1, [4, '2']]}, 'parent': '2bY`2_e=7csW+EwXTmt*', 'fields': {}, 'next': '({Hy9IC?|G1zX7Vg}PD~', 'topLevel': False, 'opcode': 'looks_thinkforsecs', 'shadow': False}, '({Hy9IC?|G1zX7Vg}PD~': {'inputs': {}, 'parent': '1NO^;2u%X1UuOUWv=g@3', 'fields': {}, 'next': None, 'topLevel': False, 'opcode': 'looks_nextcostume', 'shadow': False}}
+
+
+{u':AKJo~Xn333_`7Zoz!Ag': {u'inputs': {}, u'parent': None, u'fields': {u'KEY_OPTION': [u'space', None]}, u'next': u'!8~mRAn!w-%?D=,#b|@Y', u'topLevel': True, u'opcode': u'event_whenkeypressed', u'y': 176, u'x': 271, u'shadow': False}, u'!8~mRAn!w-%?D=,#b|@Y': {u'inputs': {}, u'parent': u':AKJo~Xn333_`7Zoz!Ag', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_hide', u'shadow': False}}
+
+
+{u'MmvTWT_3TR./u})fT+,V': {u'inputs': {}, u'parent': u'z;[15~m-[]EozFX**I{T', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_show', u'shadow': False}, u'z;[15~m-[]EozFX**I{T': {u'inputs': {}, u'parent': None, u'fields': {}, u'next': u'MmvTWT_3TR./u})fT+,V', u'topLevel': True, u'opcode': u'event_whenflagclicked', u'y': 53, u'x': 125, u'shadow': False}}
+
+
+{'ylXf!!CJ;i=H$?)r7Z^3': {'inputs': {'MESSAGE': [1, [10, 'My name is Kim!']]}, 'parent': 'GUWjki5uit`:iE@Ma$:i', 'fields': {}, 'next': 'yqe=V4B67J.]I$?l~?y#', 'topLevel': False, 'opcode': 'looks_say', 'shadow': False}, 'xW;Q8e$g_IfY4L`!K=mz': {'inputs': {}, 'parent': 'yqe=V4B67J.]I$?l~?y#', 'fields': {}, 'next': None, 'topLevel': False, 'opcode': 'looks_hide', 'shadow': False}, 'yqe=V4B67J.]I$?l~?y#': {'inputs': {'SOUND_MENU': [1, '83vG.7=/MQeKg8lNN3HE']}, 'parent': 'ylXf!!CJ;i=H$?)r7Z^3', 'fields': {}, 'next': 'xW;Q8e$g_IfY4L`!K=mz', 'topLevel': False, 'opcode': 'sound_playuntildone', 'shadow': False}, '83vG.7=/MQeKg8lNN3HE': {'inputs': {}, 'parent': 'yqe=V4B67J.]I$?l~?y#', 'fields': {'SOUND_MENU': ['Meow', None]}, 'next': None, 'topLevel': False, 'opcode': 'sound_sounds_menu', 'shadow': True}, 'GUWjki5uit`:iE@Ma$:i': {'inputs': {}, 'opcode': 'event_whenflagclicked', 'x': 24, 'parent': None, 'topLevel': True, 'y': 687, 'fields': {}, 'shadow': False, 'next': 'ylXf!!CJ;i=H$?)r7Z^3'}}
+
+

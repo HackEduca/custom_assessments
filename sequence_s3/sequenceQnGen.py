@@ -330,19 +330,36 @@ def main():
 	#Create custom questions for chosen projects
 	for project in q3_custom:
 		customize_q3(project)
-		print(project.username)
+		filename = project.username+'_q3.txt'
+		q3_file = open(filename,'w+')
+		
 		for question in project.questions:
 			if question.ID == 'Question 3':
-				print(question.ID+" scripts:")
-			for script in question.scripts:
-				print(script)
-				print('\n')
+				for script in question.scripts:
+					print>>q3_file,script
+					print>>q3_file,'\n'
 
 	for project in q6_custom:
 		customize_q6(project)
+		filename = project.username+'_q6.txt'
+		q6_file = open(filename,'w+')
+		
+		for question in project.questions:
+			if question.ID == 'Question 6':
+				for script in question.scripts:
+					print>>q6_file,script
+					print>>q6_file,'\n'
 
 	for project in q7_custom:
 		customize_q7(project)
+		filename = project.username+'_q7.txt'
+		q7_file = open(filename,'w+')
+		
+		for question in project.questions:
+			if question.ID == 'Question 7':
+				for script in question.scripts:
+					print>>q7_file,script
+					print>>q7_file,'\n'
 
 
 
