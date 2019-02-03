@@ -255,14 +255,7 @@ def main():
 			newProject.username = scratch_username
 
 			#Add project blocks 
-			projInfo = data['targets']
-			for item in projInfo:
-				blocks = item['blocks']
-				for blockName in blocks:
-					blockInfo=blocks[blockName]
-					#Add to projects' blocks dictionary: key=blockName, value=blockInfo
-					newProject.blocks[blockName] = blockInfo
-				
+			newProject.blocks = nj.get_blocks(data)
 
 			#Add project to the global list of projects
 			projects.append(newProject)
