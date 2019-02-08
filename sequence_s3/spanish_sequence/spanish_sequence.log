@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.29)  8 FEB 2019 14:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.29)  8 FEB 2019 14:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**sequence_generic.tex
-(./sequence_generic.tex
+**spanish_sequence.tex
+(./spanish_sequence.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -517,8 +517,8 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@loff=\dimen131
 \@vwid@roff=\dimen132
 ))
-(./sequence_generic.aux)
-\openout1 = `sequence_generic.aux'.
+No file spanish_sequence.aux.
+\openout1 = `spanish_sequence.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
@@ -532,7 +532,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -900,11 +899,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--124
 
  []
 
-[3 <./images/q6_script0.png> <./images/q7_script0.png>] (./sequence_generic.aux
+[3 <./images/q6_script0.png> <./images/q7_script0.png>] (./spanish_sequence.aux
 ) ) 
 Here is how much of TeX's memory you used:
- 3738 strings out of 493029
- 52663 string characters out of 6136234
+ 3736 strings out of 493029
+ 52621 string characters out of 6136234
  128881 words of memory out of 5000000
  7185 multiletter control sequences out of 15000+600000
  7904 words of font info for 28 fonts, out of 8000000 for 9000
@@ -912,7 +911,7 @@ Here is how much of TeX's memory you used:
  38i,7n,43p,255b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on sequence_generic.pdf (3 pages, 329267 bytes).
+Output written on spanish_sequence.pdf (3 pages, 329268 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream
