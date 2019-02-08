@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.29)  8 FEB 2019 14:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.29)  8 FEB 2019 11:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**loops_generic.tex
-(./loops_generic.tex
+**spanish_loops.tex
+(./spanish_loops.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -506,8 +506,8 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@loff=\dimen131
 \@vwid@roff=\dimen132
 ))
-(./loops_generic.aux)
-\openout1 = `loops_generic.aux'.
+(./spanish_loops.aux)
+\openout1 = `spanish_loops.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
@@ -621,51 +621,51 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <17.28> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 18.
-<images/q1_script0.png, id=1, 350.30875pt x 319.1925pt>
+<images/q1_script0.png, id=1, 226.8475pt x 163.61125pt>
 File: images/q1_script0.png Graphic file (type png)
 
 <use images/q1_script0.png>
 Package pdftex.def Info: images/q1_script0.png used on input line 26.
-(pdftex.def)             Requested size: 105.09343pt x 95.75848pt.
+(pdftex.def)             Requested size: 136.10954pt x 98.1675pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
-<images/q2_script0.png, id=3, 285.065pt x 254.9525pt>
+<images/q2_script0.png, id=3, 195.73125pt x 159.59625pt>
 File: images/q2_script0.png Graphic file (type png)
 
 <use images/q2_script0.png>
 Package pdftex.def Info: images/q2_script0.png used on input line 33.
-(pdftex.def)             Requested size: 85.52016pt x 76.48633pt.
+(pdftex.def)             Requested size: 137.01093pt x 111.7166pt.
 
-<images/q2_script1.png, id=4, 263.98625pt x 145.54375pt>
+<images/q2_script1.png, id=4, 161.60374pt x 98.3675pt>
 File: images/q2_script1.png Graphic file (type png)
 
 <use images/q2_script1.png>
 Package pdftex.def Info: images/q2_script1.png used on input line 37.
-(pdftex.def)             Requested size: 79.19647pt x 43.66345pt.
+(pdftex.def)             Requested size: 96.96298pt x 59.02094pt.
 
-<images/q2_script2.png, id=5, 264.99pt x 275.0275pt>
+<images/q2_script2.png, id=5, 166.6225pt x 164.615pt>
 File: images/q2_script2.png Graphic file (type png)
 
 <use images/q2_script2.png>
 Package pdftex.def Info: images/q2_script2.png used on input line 38.
-(pdftex.def)             Requested size: 79.4976pt x 82.50888pt.
+(pdftex.def)             Requested size: 99.97426pt x 98.76976pt.
 
-<images/q2_script3.png, id=6, 263.98625pt x 405.515pt>
+<images/q2_script3.png, id=6, 164.615pt x 209.78375pt>
 File: images/q2_script3.png Graphic file (type png)
 
 <use images/q2_script3.png>
 Package pdftex.def Info: images/q2_script3.png used on input line 39.
-(pdftex.def)             Requested size: 79.19647pt x 121.65543pt.
+(pdftex.def)             Requested size: 98.76976pt x 125.8712pt.
 
-<images/q2_script4.png, id=7, 262.9825pt x 533.995pt>
+<images/q2_script4.png, id=7, 169.63374pt x 277.035pt>
 File: images/q2_script4.png Graphic file (type png)
 
 <use images/q2_script4.png>
 Package pdftex.def Info: images/q2_script4.png used on input line 40.
-(pdftex.def)             Requested size: 78.89534pt x 160.19974pt.
+(pdftex.def)             Requested size: 101.78102pt x 166.22227pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 36--41
 
@@ -685,130 +685,127 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-<images/q3_script0.png, id=8, 156.585pt x 80.3pt>
+<images/q3_script0.png, id=8, 107.40125pt x 46.1725pt>
 File: images/q3_script0.png Graphic file (type png)
- <use images/q3_script0.png>
-Package pdftex.def Info: images/q3_script0.png used on input line 46.
-(pdftex.def)             Requested size: 46.97586pt x 24.09018pt.
 
-<images/q3_script1.png, id=9, 156.585pt x 209.78375pt>
+<use images/q3_script0.png>
+Package pdftex.def Info: images/q3_script0.png used on input line 46.
+(pdftex.def)             Requested size: 64.44122pt x 27.70369pt.
+
+<images/q3_script1.png, id=9, 104.39pt x 113.42375pt>
 File: images/q3_script1.png Graphic file (type png)
 
 <use images/q3_script1.png>
 Package pdftex.def Info: images/q3_script1.png used on input line 47.
-(pdftex.def)             Requested size: 46.97586pt x 62.9356pt.
+(pdftex.def)             Requested size: 62.63446pt x 68.05476pt.
 
-<images/q3_script2.png, id=10, 222.8325pt x 191.71625pt>
+<images/q3_script2.png, id=10, 127.47626pt x 105.39375pt>
 File: images/q3_script2.png Graphic file (type png)
 
 <use images/q3_script2.png>
 Package pdftex.def Info: images/q3_script2.png used on input line 48.
-(pdftex.def)             Requested size: 66.85027pt x 57.5153pt.
+(pdftex.def)             Requested size: 76.48633pt x 63.23672pt.
 
-<images/q3_script3.png, id=11, 223.83624pt x 319.1925pt>
+<images/q3_script3.png, id=11, 129.48375pt x 175.65625pt>
 File: images/q3_script3.png Graphic file (type png)
 
 <use images/q3_script3.png>
 Package pdftex.def Info: images/q3_script3.png used on input line 49.
-(pdftex.def)             Requested size: 67.15138pt x 95.75848pt.
+(pdftex.def)             Requested size: 77.69083pt x 105.39455pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 46--50
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-<images/q4_script0.png, id=12, 394.47375pt x 256.96pt>
-File: images/q4_script0.png Graphic file (type png)
-
-<use images/q4_script0.png>
-Package pdftex.def Info: images/q4_script0.png used on input line 55.
-(pdftex.def)             Requested size: 118.34303pt x 77.0886pt.
- [1
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/q1_script0.png> <
 ./images/q2_script0.png> <./images/q2_script1.png> <./images/q2_script2.png> <.
 /images/q2_script3.png> <./images/q2_script4.png> <./images/q3_script0.png> <./
 images/q3_script1.png> <./images/q3_script2.png> <./images/q3_script3.png>]
-<images/q4_script1.png, id=30, 375.4025pt x 145.54375pt>
+<images/q4_script0.png, id=29, 247.92625pt x 136.51pt>
+File: images/q4_script0.png Graphic file (type png)
+
+<use images/q4_script0.png>
+Package pdftex.def Info: images/q4_script0.png used on input line 55.
+(pdftex.def)             Requested size: 173.54718pt x 95.55634pt.
+
+<images/q4_script1.png, id=30, 213.79875pt x 69.25874pt>
 File: images/q4_script1.png Graphic file (type png)
 
 <use images/q4_script1.png>
 Package pdftex.def Info: images/q4_script1.png used on input line 59.
-(pdftex.def)             Requested size: 93.85039pt x 36.38583pt.
+(pdftex.def)             Requested size: 133.62389pt x 43.28659pt.
 
-<images/q4_script2.png, id=31, 375.4025pt x 340.27126pt>
+<images/q4_script2.png, id=31, 234.8775pt x 180.675pt>
 File: images/q4_script2.png Graphic file (type png)
 
 <use images/q4_script2.png>
 Package pdftex.def Info: images/q4_script2.png used on input line 60.
-(pdftex.def)             Requested size: 93.85039pt x 85.0676pt.
+(pdftex.def)             Requested size: 146.79807pt x 112.92159pt.
 
-<images/q4_script3.png, id=32, 378.41376pt x 406.51875pt>
+<images/q4_script3.png, id=32, 200.75pt x 173.64874pt>
 File: images/q4_script3.png Graphic file (type png)
 
 <use images/q4_script3.png>
 Package pdftex.def Info: images/q4_script3.png used on input line 61.
-(pdftex.def)             Requested size: 94.6032pt x 101.62943pt.
+(pdftex.def)             Requested size: 125.46843pt x 108.5302pt.
 
-<images/q4_script4.png, id=33, 378.41376pt x 406.51875pt>
+<images/q4_script4.png, id=33, 205.76875pt x 175.65625pt>
 File: images/q4_script4.png Graphic file (type png)
 
 <use images/q4_script4.png>
 Package pdftex.def Info: images/q4_script4.png used on input line 62.
-(pdftex.def)             Requested size: 94.6032pt x 101.62943pt.
+(pdftex.def)             Requested size: 128.60513pt x 109.78487pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 58--63
 
  []
 
 
+Overfull \hbox (8.9901pt too wide) in paragraph at lines 58--63
+[]   []   []   []
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 58--63
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
-
- []
-
-<images/q5_script0.png, id=34, 338.26375pt x 384.43625pt>
+<images/q5_script0.png, id=34, 201.75375pt x 163.61125pt>
 File: images/q5_script0.png Graphic file (type png)
 
 <use images/q5_script0.png>
 Package pdftex.def Info: images/q5_script0.png used on input line 67.
-(pdftex.def)             Requested size: 101.4799pt x 115.33176pt.
+(pdftex.def)             Requested size: 151.31493pt x 122.70813pt.
 
-<images/q5_script1.png, id=35, 208.78pt x 79.29625pt>
+<images/q5_script1.png, id=35, 99.37125pt x 39.14626pt>
 File: images/q5_script1.png Graphic file (type png)
 
 <use images/q5_script1.png>
 Package pdftex.def Info: images/q5_script1.png used on input line 71.
-(pdftex.def)             Requested size: 62.63448pt x 23.78905pt.
+(pdftex.def)             Requested size: 79.4971pt x 31.31703pt.
 
-<images/q5_script2.png, id=36, 318.18875pt x 81.30376pt>
+<images/q5_script2.png, id=36, 195.73125pt x 40.15pt>
 File: images/q5_script2.png Graphic file (type png)
 
 <use images/q5_script2.png>
 Package pdftex.def Info: images/q5_script2.png used on input line 72.
-(pdftex.def)             Requested size: 95.45735pt x 24.3913pt.
+(pdftex.def)             Requested size: 156.58519pt x 32.12003pt.
 
-<images/q5_script3.png, id=37, 156.585pt x 79.29625pt>
+<images/q5_script3.png, id=37, 85.31876pt x 38.1425pt>
 File: images/q5_script3.png Graphic file (type png)
 
 <use images/q5_script3.png>
 Package pdftex.def Info: images/q5_script3.png used on input line 73.
-(pdftex.def)             Requested size: 46.97586pt x 23.78905pt.
+(pdftex.def)             Requested size: 68.25508pt x 30.51402pt.
 
-<images/q5_script4.png, id=38, 191.71625pt x 80.3pt>
+<images/q5_script4.png, id=38, 125.46875pt x 39.14626pt>
 File: images/q5_script4.png Graphic file (type png)
 
 <use images/q5_script4.png>
 Package pdftex.def Info: images/q5_script4.png used on input line 74.
-(pdftex.def)             Requested size: 57.5153pt x 24.09018pt.
+(pdftex.def)             Requested size: 100.37512pt x 31.31703pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 70--75
 
@@ -822,20 +819,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--75
 File: images/q5_script1.png Graphic file (type png)
 <use images/q5_script1.png>
 Package pdftex.def Info: images/q5_script1.png used on input line 77.
-(pdftex.def)             Requested size: 62.63448pt x 23.78905pt.
+(pdftex.def)             Requested size: 79.4971pt x 31.31703pt.
 File: images/q5_script2.png Graphic file (type png)
  <use images/q5_script2.png>
 Package pdftex.def Info: images/q5_script2.png used on input line 78.
-(pdftex.def)             Requested size: 95.45735pt x 24.3913pt.
+(pdftex.def)             Requested size: 156.58519pt x 32.12003pt.
 File: images/q5_script3.png Graphic file (type png)
 
 <use images/q5_script3.png>
 Package pdftex.def Info: images/q5_script3.png used on input line 79.
-(pdftex.def)             Requested size: 46.97586pt x 23.78905pt.
+(pdftex.def)             Requested size: 68.25508pt x 30.51402pt.
 File: images/q5_script4.png Graphic file (type png)
  <use images/q5_script4.png>
 Package pdftex.def Info: images/q5_script4.png used on input line 80.
-(pdftex.def)             Requested size: 57.5153pt x 24.09018pt.
+(pdftex.def)             Requested size: 100.37512pt x 31.31703pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 76--81
 
@@ -849,20 +846,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--81
 File: images/q5_script1.png Graphic file (type png)
 <use images/q5_script1.png>
 Package pdftex.def Info: images/q5_script1.png used on input line 83.
-(pdftex.def)             Requested size: 62.63448pt x 23.78905pt.
+(pdftex.def)             Requested size: 79.4971pt x 31.31703pt.
 File: images/q5_script2.png Graphic file (type png)
  <use images/q5_script2.png>
 Package pdftex.def Info: images/q5_script2.png used on input line 84.
-(pdftex.def)             Requested size: 95.45735pt x 24.3913pt.
+(pdftex.def)             Requested size: 156.58519pt x 32.12003pt.
 File: images/q5_script3.png Graphic file (type png)
 
 <use images/q5_script3.png>
 Package pdftex.def Info: images/q5_script3.png used on input line 85.
-(pdftex.def)             Requested size: 46.97586pt x 23.78905pt.
+(pdftex.def)             Requested size: 68.25508pt x 30.51402pt.
 File: images/q5_script4.png Graphic file (type png)
  <use images/q5_script4.png>
 Package pdftex.def Info: images/q5_script4.png used on input line 86.
-(pdftex.def)             Requested size: 57.5153pt x 24.09018pt.
+(pdftex.def)             Requested size: 100.37512pt x 31.31703pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 82--87
 
@@ -881,38 +878,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
 [2 <./images/q4_script0.png> <./images/q4_script1.png> <./images/q4_script2.png
 > <./images/q4_script3.png> <./images/q4_script4.png> <./images/q5_script0.png>
  <./images/q5_script1.png> <./images/q5_script2.png> <./images/q5_script3.png> 
-<./images/q5_script4.png>] <images/cat.png, id=52, 71.55446pt x 83.4802pt>
+<./images/q5_script4.png>] <images/cat.png, id=50, 71.55446pt x 83.4802pt>
 File: images/cat.png Graphic file (type png)
 
 <use images/cat.png>
 Package pdftex.def Info: images/cat.png used on input line 92.
 (pdftex.def)             Requested size: 17.88857pt x 20.87pt.
- <images/dog.png, id=53, 149.05687pt x 107.65219pt>
+ <images/dog.png, id=51, 149.05687pt x 107.65219pt>
 File: images/dog.png Graphic file (type png)
 
 <use images/dog.png>
 Package pdftex.def Info: images/dog.png used on input line 93.
 (pdftex.def)             Requested size: 29.81084pt x 21.53004pt.
- <images/q6_script0.png, id=54, 350.30875pt x 580.1675pt>
+ <images/q6_script0.png, id=52, 200.75pt x 243.91125pt>
 File: images/q6_script0.png Graphic file (type png)
 
 <use images/q6_script0.png>
 Package pdftex.def Info: images/q6_script0.png used on input line 94.
-(pdftex.def)             Requested size: 105.09343pt x 174.05157pt.
+(pdftex.def)             Requested size: 160.6002pt x 195.12926pt.
 
-<images/q6_script1.png, id=55, 338.26375pt x 341.275pt>
+<images/q6_script1.png, id=53, 200.75pt x 149.55875pt>
 File: images/q6_script1.png Graphic file (type png)
 
 <use images/q6_script1.png>
 Package pdftex.def Info: images/q6_script1.png used on input line 96.
-(pdftex.def)             Requested size: 101.4799pt x 102.38329pt.
+(pdftex.def)             Requested size: 160.6002pt x 119.64716pt.
 
-<images/q6_script2.png, id=56, 223.83624pt x 340.27126pt>
+<images/q6_script2.png, id=54, 141.52875pt x 151.56625pt>
 File: images/q6_script2.png Graphic file (type png)
 
 <use images/q6_script2.png>
 Package pdftex.def Info: images/q6_script2.png used on input line 97.
-(pdftex.def)             Requested size: 67.15138pt x 102.08215pt.
+(pdftex.def)             Requested size: 113.22314pt x 121.25316pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 92--98
 
@@ -923,22 +920,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
-
- []
-
-<images/q7_script0.png, id=57, 344.28625pt x 319.1925pt>
+<images/q7_script0.png, id=55, 208.78pt x 143.53625pt>
 File: images/q7_script0.png Graphic file (type png)
 
 <use images/q7_script0.png>
 Package pdftex.def Info: images/q7_script0.png used on input line 116.
-(pdftex.def)             Requested size: 103.28667pt x 95.75848pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--124
-
- []
-
+(pdftex.def)             Requested size: 167.0242pt x 114.82915pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 118--124
 
@@ -995,27 +982,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-<images/ec_script0.png, id=67, 383.4325pt x 428.60126pt>
+<images/ec_script0.png, id=65, 225.84375pt x 182.6825pt>
 File: images/ec_script0.png Graphic file (type png)
 
 <use images/ec_script0.png>
 Package pdftex.def Info: images/ec_script0.png used on input line 134.
-(pdftex.def)             Requested size: 115.03062pt x 128.58136pt.
- [4 <./images/ec_script0.png>] (./loops_generic.aux) ) 
+(pdftex.def)             Requested size: 180.67523pt x 146.14618pt.
+ [4 <./images/ec_script0.png>] (./spanish_loops.aux) ) 
 Here is how much of TeX's memory you used:
- 3653 strings out of 493029
- 52256 string characters out of 6136234
+ 3657 strings out of 493029
+ 52289 string characters out of 6136234
  126820 words of memory out of 5000000
- 7095 multiletter control sequences out of 15000+600000
+ 7099 multiletter control sequences out of 15000+600000
  7904 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,10n,35p,246b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on loops_generic.pdf (4 pages, 739754 bytes).
+Output written on spanish_loops.pdf (4 pages, 471548 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  17 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  136 words of extra memory for PDF output out of 10000 (max. 10000000)
