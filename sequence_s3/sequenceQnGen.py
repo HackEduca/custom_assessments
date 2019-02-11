@@ -200,6 +200,17 @@ def decide_custom(candidates, custom, noCustom,csvCustom,csvNoCustom):
 				custom.add(candidates[x])
 				print>>csvCustom, candidates[last].username+','+candidates[last].ID
 
+#Function to check for excluded opcodes
+def has_exc(script):
+	exc_opcodes=['control_repeat','control_repeat_until','control_forever','control_if ',
+	'control_if_else','data_hidevariable','data_showvariable','data_changevariableby','sound_play']
+	for block in script:
+		blockInfo=script[block]
+		blockOpcode=blockInfo['opcode']
+		if blockOpcode in exc_opcodes:
+			return True
+	return False
+
 
 def main():
 
@@ -279,33 +290,36 @@ def main():
 		if len(project.greenFlags) > 0:
 			for block in project.greenFlags:
 				gfScript=nj.create_script(project.blocks, block)
-				project.gfScripts.append(gfScript)
+				if has_exc(gfScript)==False:
+					project.gfScripts.append(gfScript)
 
-				if len(gfScript)==4:
-					q6_cands.add(project)
+					if len(gfScript)==4:
+						q6_cands.add(project)
 					
-				if len(gfScript)>=2 and len(gfScript)<=4:
-					q3_cands.add(project)
-					q7_cands.add(project)
+					if len(gfScript)>=2 and len(gfScript)<=4:
+						q3_cands.add(project)
+						q7_cands.add(project)
 					
 			
 		#If there are any sprite clicked blocks in the project
 		if len(project.spriteClickeds) > 0:
 			for block in project.spriteClickeds:
-				spriteScript=nj.create_script(project.blocks, block) 
-				project.scScripts.append(spriteScript)
-				if len(spriteScript)>=2 and len(spriteScript)<=4:
-					q3_cands.add(project)
-					q7_cands.add(project)
+				spriteScript=nj.create_script(project.blocks, block)
+				if has_exc(spriteScript)==False:
+					project.scScripts.append(spriteScript)
+					if len(spriteScript)>=2 and len(spriteScript)<=4:
+						q3_cands.add(project)
+						q7_cands.add(project)
 					
 
 		#If there are any key pressedblocks in the project
 		if len(project.keyPresseds) > 0:
 			for block in project.keyPresseds:
 				keyScript=nj.create_script(project.blocks, block) 
-				project.kpScripts.append(keyScript)
-				if len(keyScript)>=2 and len(keyScript)<=4:
-					q3_cands.add(project)
+				if has_exc(keyScript)==False:
+					project.kpScripts.append(keyScript)
+					if len(keyScript)>=2 and len(keyScript)<=4:
+						q3_cands.add(project)
 					
 
 	#Decide which projects get custom code
