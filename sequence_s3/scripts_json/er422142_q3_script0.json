@@ -1,0 +1,3 @@
+{'2bY`2_e=7csW+EwXTmt*': {'inputs': {}, 'opcode': 'event_whenthisspriteclicked', 'x': 31, 'parent': None, 'topLevel': True, 'y': 70, 'fields': {}, 'shadow': False, 'next': '1NO^;2u%X1UuOUWv=g@3'}, '1NO^;2u%X1UuOUWv=g@3': {'inputs': {'MESSAGE': [1, [10, 'Hmm...']], 'SECS': [1, [4, '2']]}, 'parent': '2bY`2_e=7csW+EwXTmt*', 'fields': {}, 'next': '({Hy9IC?|G1zX7Vg}PD~', 'topLevel': False, 'opcode': 'looks_thinkforsecs', 'shadow': False}, '({Hy9IC?|G1zX7Vg}PD~': {'inputs': {}, 'parent': '1NO^;2u%X1UuOUWv=g@3', 'fields': {}, 'next': None, 'topLevel': False, 'opcode': 'looks_nextcostume', 'shadow': False}}
+
+

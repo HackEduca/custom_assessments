@@ -1,0 +1,3 @@
+{'=Jt{3ymiml+o?L*E2eZp': {'inputs': {'STEPS': [1, [4, '10']]}, 'parent': '%h@_UWp3nK]|v,HUnze^', 'fields': {}, 'next': '){8C;vZSkS;[y$cf*2g$', 'topLevel': False, 'opcode': 'motion_movesteps', 'shadow': False}, '%h@_UWp3nK]|v,HUnze^': {'inputs': {}, 'parent': 'Jclia0i/TNh|5,RYxc(Q', 'fields': {}, 'next': '=Jt{3ymiml+o?L*E2eZp', 'topLevel': False, 'opcode': 'looks_show', 'shadow': False}, '){8C;vZSkS;[y$cf*2g$': {'inputs': {}, 'parent': '=Jt{3ymiml+o?L*E2eZp', 'fields': {}, 'next': None, 'topLevel': False, 'opcode': 'looks_hide', 'shadow': False}, 'Jclia0i/TNh|5,RYxc(Q': {'inputs': {}, 'opcode': 'event_whenflagclicked', 'x': 31, 'parent': None, 'topLevel': True, 'y': 446, 'fields': {}, 'shadow': False, 'next': '%h@_UWp3nK]|v,HUnze^'}}
+
+

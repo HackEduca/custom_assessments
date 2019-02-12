@@ -1,0 +1,3 @@
+{u'|ks,YHip%x=iQ30?Jv)C': {u'inputs': {}, u'parent': None, u'fields': {}, u'next': u'@Cg]tY]i#D-w@S;-ch)e', u'topLevel': True, u'opcode': u'event_whenthisspriteclicked', u'y': 604, u'x': 99, u'shadow': False}, u'@Cg]tY]i#D-w@S;-ch)e': {u'inputs': {u'DURATION': [1, [5, u'9']]}, u'parent': u'|ks,YHip%x=iQ30?Jv)C', u'fields': {}, u'next': u'.F4S8_{0U^cH9L)Dng.8', u'topLevel': False, u'opcode': u'control_wait', u'shadow': False}, u'.F4S8_{0U^cH9L)Dng.8': {u'inputs': {u'SOUND_MENU': [1, u')pz,KZd2YPLL^__Rtp86']}, u'parent': u'@Cg]tY]i#D-w@S;-ch)e', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'sound_playuntildone', u'shadow': False}}
+
+

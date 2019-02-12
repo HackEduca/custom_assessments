@@ -1,0 +1,3 @@
+{u'~%^[U!L9wx|-YhrZ:xeg': {u'inputs': {}, u'parent': None, u'fields': {u'KEY_OPTION': [u'space', None]}, u'next': u'=7Q1FO8XB]JYlM?7}ZpT', u'topLevel': True, u'opcode': u'event_whenkeypressed', u'y': 131, u'x': 116, u'shadow': False}, u'=7Q1FO8XB]JYlM?7}ZpT': {u'inputs': {u'MESSAGE': [1, [10, u'MY favorite Hobby is gaming']], u'SECS': [1, [4, u'5']]}, u'parent': u'~%^[U!L9wx|-YhrZ:xeg', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}}
+
+

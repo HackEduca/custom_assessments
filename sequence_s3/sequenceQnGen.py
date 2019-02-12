@@ -197,7 +197,7 @@ def decide_custom(candidates, custom, noCustom,csvCustom,csvNoCustom):
 				noCustom.add(candidates[last])
 				print>>csvNoCustom, candidates[last].username+','+candidates[last].ID
 			else:
-				custom.add(candidates[x])
+				custom.add(candidates[last])
 				print>>csvCustom, candidates[last].username+','+candidates[last].ID
 
 #Function to check for excluded opcodes
@@ -344,18 +344,18 @@ def main():
 	#Create custom questions for chosen projects
 	for project in q3_custom:
 		customize_q3(project)
-		filename = project.username+'_q3.txt'
-		q3_file = open(filename,'w+')
 		
 		for question in project.questions:
 			if question.ID == 'Question 3':
-				for script in question.scripts:
-					print>>q3_file,script
+				for i in range(0,len(question.scripts)):
+					filename = project.username+'_q3_script'+str(i)+'.json'
+					q3_file = open(filename,'w+')
+					print>>q3_file,question.scripts[i]
 					print>>q3_file,'\n'
 
 	for project in q6_custom:
 		customize_q6(project)
-		filename = project.username+'_q6.txt'
+		filename = project.username+'_q6.json'
 		q6_file = open(filename,'w+')
 		
 		for question in project.questions:
@@ -366,7 +366,7 @@ def main():
 
 	for project in q7_custom:
 		customize_q7(project)
-		filename = project.username+'_q7.txt'
+		filename = project.username+'_q7.json'
 		q7_file = open(filename,'w+')
 		
 		for question in project.questions:
