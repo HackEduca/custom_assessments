@@ -250,7 +250,8 @@ def main():
 			#Read json file from URL. Convert Scratch URL to Scratch API URL, then read file.
 			apiURL = sa.create_API_URL(proj_id)
 			json_stream = requests.get(apiURL, allow_redirects=True)
-			json_filename = scratch_username+".json"
+			user_directory = "user_json_files/"
+			json_filename = user_directory + scratch_username+".json"
 			open(json_filename, 'wb').write(json_stream.content)
 			json_data= open(json_filename, "r")
 			data = json.load(json_data)
@@ -342,20 +343,22 @@ def main():
 	decide_custom(q7_cands, q7_custom, q7_noCustom,q7_custom_csv,q7_noCustom_csv)
 
 	#Create custom questions for chosen projects
+	directory = "json_files/"
 	for project in q3_custom:
 		customize_q3(project)
 		
 		for question in project.questions:
 			if question.ID == 'Question 3':
 				for i in range(0,len(question.scripts)):
-					filename = project.username+'_q3_script'+str(i)+'.json'
+					filename = directory + project.username+'_q3_script'+str(i)+'.json'
 					q3_file = open(filename,'w+')
 					print>>q3_file,question.scripts[i]
 					print>>q3_file,'\n'
-
+	print(q6_custom)
 	for project in q6_custom:
+		print("!")
 		customize_q6(project)
-		filename = project.username+'_q6.json'
+		filename = directory + project.username+'_q6.json'
 		q6_file = open(filename,'w+')
 		
 		for question in project.questions:
@@ -366,7 +369,7 @@ def main():
 
 	for project in q7_custom:
 		customize_q7(project)
-		filename = project.username+'_q7.json'
+		filename = directory + project.username+'_q7.json'
 		q7_file = open(filename,'w+')
 		
 		for question in project.questions:
