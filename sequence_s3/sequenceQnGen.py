@@ -94,8 +94,8 @@ def customize_q3(project):
 	"=Jt{3ymiml+o?L*E2eZp":{"opcode":"motion_movesteps","next":"){8C;vZSkS;[y$cf*2g$","parent":"%h@_UWp3nK]|v,HUnze^","inputs":{"STEPS":[1,[4,"10"]]},"fields":{},"shadow":False,"topLevel":False},
 	"){8C;vZSkS;[y$cf*2g$":{"opcode":"looks_hide","next":None,"parent":"=Jt{3ymiml+o?L*E2eZp","inputs":{},"fields":{},"shadow":False,"topLevel":False}},
 
-	#Second GF generic script
-	{"GUWjki5uit`:iE@Ma$:i":{"opcode":"event_whenflagclicked","next":"ylXf!!CJ;i=H$?)r7Z^3","parent":None,"inputs":{},"fields":{},"shadow":False,"topLevel":True,"x":24,"y":687},
+	#Hardcoded Sprite Clicked generic script
+	{"GUWjki5uit`:iE@Ma$:i":{"opcode":"event_whenthisspriteclicked","next":"ylXf!!CJ;i=H$?)r7Z^3","parent":None,"inputs":{},"fields":{},"shadow":False,"topLevel":True,"x":24,"y":687},
 	"ylXf!!CJ;i=H$?)r7Z^3":{"opcode":"looks_say","next":"yqe=V4B67J.]I$?l~?y#","parent":"GUWjki5uit`:iE@Ma$:i","inputs":{"MESSAGE":[1,[10,"My name is Kim!"]]},"fields":{},"shadow":False,"topLevel":False},
 	"yqe=V4B67J.]I$?l~?y#":{"opcode":"sound_playuntildone","next":"xW;Q8e$g_IfY4L`!K=mz","parent":"ylXf!!CJ;i=H$?)r7Z^3","inputs":{"SOUND_MENU":[1,"83vG.7=/MQeKg8lNN3HE"]},"fields":{},"shadow":False,"topLevel":False},
 	"83vG.7=/MQeKg8lNN3HE":{"opcode":"sound_sounds_menu","next":None,"parent":"yqe=V4B67J.]I$?l~?y#","inputs":{},"fields":{"SOUND_MENU":["Meow",None]},"shadow":True,"topLevel":False},
