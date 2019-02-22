@@ -20,7 +20,7 @@ def create_assessment(custom_directory, user, q3, q6, q7, img_dir, img_list):
 	for h in header:
 		if "Scratch Username: " in h:
 			username = h.split("Scratch Username: ")
-			line = "Scratch Username: " + user + " " + username[1]
+			line = "Scratch Username: " + user + "\n"
 		else:
 			line = h
 		assessment.append(line)
@@ -98,6 +98,8 @@ def custom_question(qlines, user, img_directory, img_list):
 				lines = lines[1].split("}")
 				cust_img = user + "_" + lines[0]
 				newl = l.replace(lines[0], cust_img)
+				newl = newl.replace("scale=.3", "scale=.18")
+				newl = newl.replace("1cm", "0.5cm")
 				cust_q.append(newl)
 				img_counter += 1
 		else:
@@ -113,7 +115,7 @@ custom_directory = "custom_scratch3/"
 img_directory = "cropped_img_files"
 img_list = os.listdir(img_directory)
 if '.DS_Store' in img_list:
-	imgs.remove('.DS_Store')
+	img_list.remove('.DS_Store')
 for student in all_students:
 	create_assessment(custom_directory, student, q3_students, 
 		q6_students, q7_students, img_directory, img_list)
