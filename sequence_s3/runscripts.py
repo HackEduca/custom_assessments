@@ -85,3 +85,17 @@ for i in range(lsp):
 		file_type = filename[-3:]
 		if file_type in file_extensions:
 			os.rename(filename, archive + filename)
+
+	dir1 = 'json_files/'
+	files = os.listdir('./' + dir1)
+	if '.DS_Store' in files:
+		files.remove('.DS_Store')
+	for filename in files:
+		os.rename(dir1 + filename, archive + filename)
+
+	dir2 = 'user_json_files/'
+	files = os.listdir('./' + dir2)
+	if '.DS_Store' in files:
+		files.remove('.DS_Store')
+	for filename in files:
+		os.rename(dir2 + filename, archive + filename)
