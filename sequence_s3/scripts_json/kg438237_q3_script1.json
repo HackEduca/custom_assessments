@@ -1,3 +1,0 @@
-{u'R-N;ZeW$g7UrGa;@RLUs': {u'inputs': {}, u'parent': None, u'fields': {u'KEY_OPTION': [u'down arrow', None]}, u'next': u'q~#niF!Fgbsd-O63[]aX', u'topLevel': True, u'opcode': u'event_whenkeypressed', u'y': 183, u'x': 206, u'shadow': False}, u'q~#niF!Fgbsd-O63[]aX': {u'inputs': {u'MESSAGE': [1, [10, u'My favorite subject in school is math!']], u'SECS': [1, [4, u'3']]}, u'parent': u'R-N;ZeW$g7UrGa;@RLUs', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}}
-
-

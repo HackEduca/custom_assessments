@@ -1,3 +1,0 @@
-{u'Op^JS?7ge536xSia!D1!': {u'inputs': {}, u'parent': None, u'fields': {}, u'next': u'3{^:Q};5V~ntA9S6D@K]', u'topLevel': True, u'opcode': u'event_whenthisspriteclicked', u'y': 90, u'x': 21, u'shadow': False}, u'3{^:Q};5V~ntA9S6D@K]': {u'inputs': {u'MESSAGE': [1, [10, u'My favorite book series is Percy Jackson']], u'SECS': [1, [4, u'5']]}, u'parent': u'Op^JS?7ge536xSia!D1!', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}}
-
-

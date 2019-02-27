@@ -3,14 +3,17 @@ import pandas as pd
 
 def all_users(filename):
 
-	df = pd.read_csv(filename, header=None)
-	names = df.iloc[:,0]
+	try:
+		df = pd.read_csv(filename, header=None)
+		names = df.iloc[:,0]
 
-	return names.tolist()
+		return names.tolist()
+	except:
+		return []
 
 def create_assessment(custom_directory, user, q3, q6, q7, img_dir, img_list):
 
-	custom_am = open("custom_assessments/"+user+".tex", "w")
+	custom_am = open(user+".tex", "w")
 	assessment = []
 	n_questions = user + " has custom questions for: "
 
@@ -66,7 +69,6 @@ def create_assessment(custom_directory, user, q3, q6, q7, img_dir, img_list):
 
 	for l in assessment:
 		custom_am.write(l)
-	print(n_questions)
 
 	custom_am.close()
 	hf.close()
@@ -112,7 +114,7 @@ q3_students = all_users("q3_custom.csv")
 q6_students = all_users("q6_custom.csv")
 q7_students = all_users("q7_custom.csv")
 custom_directory = "custom_scratch3/"
-img_directory = "cropped_img_files"
+img_directory = "img_files"
 img_list = os.listdir(img_directory)
 if '.DS_Store' in img_list:
 	img_list.remove('.DS_Store')

@@ -1,3 +1,0 @@
-{u'VnP.(1_$:O[n,Gc|nuts': {u'inputs': {u'MESSAGE': [1, [10, u'Hello! My name is Jana. Press space to learn facts about me']], u'SECS': [1, [4, u'3']]}, u'parent': u'vB:i9M:AJ/Tn!oa?[#uc', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}, u'vB:i9M:AJ/Tn!oa?[#uc': {u'inputs': {}, u'parent': None, u'fields': {u'KEY_OPTION': [u'up arrow', None]}, u'next': u'VnP.(1_$:O[n,Gc|nuts', u'topLevel': True, u'opcode': u'event_whenkeypressed', u'y': 178, u'x': 247, u'shadow': False}}
-
-

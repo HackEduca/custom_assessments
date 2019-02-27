@@ -1,0 +1,209 @@
+Block,Opcode
+() - (),operator_subtract
+() * (),operator_multiply
+() / (),operator_divide
+() and (),operator_and
+() Mod (),operator_mod
+() + (),operator_add
+() < (),operator_lt
+() = (),operator_equals
+() > (),operator_gt
+() or (),operator_or
+Abs (),operator_mathop
+Answer,
+Add () to (),
+Backdrop #,looks_backdropnumbername
+"If on Edge, Bounce",motion_ifonedgebounce
+Broadcast (),event_broadcast
+Change () Effect by (),looks_changeeffectby
+Change Pen (Color/sat/bright/trans) by (),pen_changecolorparamby
+Change Pen Shade by (),
+Change Pen Size by (),pen_changePenSizeBy
+Change Size by (),looks_changesizeby
+Change Tempo by (),music_changeTempo
+Change () by (),
+Change Volume by (),sound_changevolumeby
+Change X by (),motion_changexby
+Change Y by (),motion_changeyby
+Clear,
+Clear Counter,
+Color () is Touching ()?,sensing_coloristouchingcolor
+Go to Front,looks_gotofrontback
+() of () (Operators block),
+Join ()(),operator_join
+() (List block),
+Costume #,looks_costumenumbername
+Costume Name,looks_costumenumbername
+Counter,
+Create Clone of (),control_create_clone_of
+Delete This Clone,control_delete_this_clone
+Delete () of (),
+Distance to (),sensing_distanceto
+Ask () and Wait,sensing_askandwait
+Broadcast () and Wait,event_broadcastandwait
+Forever,control_forever
+Forever If (),
+For Each () in (),
+If () Then,control_if 
+"If () Then, Else",control_if_else
+Play Sound () Until Done,sound_playuntildone
+Repeat (),control_repeat
+Stop Script,control_stop
+Repeat Until (),control_repeat_until
+Wait Until (),control_wait_until
+While (),
+Play Drum () for () Beats,music_playDrumForBeats
+Clear Graphic Effects,looks_cleargraphiceffects
+Move () Steps,motion_movesteps
+Color FX Test (),
+() of () (Sensing block),
+Item () of (),
+custom block parameter,
+User ID,
+Username,
+Glide () Secs to X: () Y: (),motion_glidesecstoxy
+Glide () Secs to ():,motion_glideto
+Go Back () Layers,looks_gotofrontback
+Go to (),motion_goto
+Go to X: () Y: (),motion_gotoxy
+Direction,motion_direction
+Point in Direction (),motion_pointindirection
+Hide,looks_hide
+Hide All Sprites,
+Hide List (),
+Hide Variable (),data_hidevariable
+Incr Counter,
+Insert () at () of (),
+Set Instrument to (),music_setInstrument
+Loud?,
+Key () Pressed?,sensing_keypressed
+Letter () of (),operator_letter_of
+Length of () (List block),operator_length
+() Contains (),operator_contains
+Switch Costume to (),looks_switchcostumeto
+Set Instrument to (),
+Mouse Down?,sensing_mousedown
+Mouse X,sensing_mousex
+Mouse Y,sensing_mousey
+Next Costume,looks_nextcostume
+Next Backdrop,looks_nextbackdrop
+Not (),operator_not
+Play Note () for () Beats,music_playNoteForBeats
+Obsolete,
+Set Pen Color to (),pen_setPenColorToColor
+Set Pen Size to (),pen_setPenSizeTo
+Play Sound (),sound_play
+Point Towards (),motion_pointtowards
+Pen Down,pen_penDown
+Pen Up,pen_penUp
+Pick Random () to (),operator_random
+() (Variables block),
+Rest for () Beats,music_restForBeats
+Round (),operator_round
+Say (),looks_say
+Say () for () Secs,looks_sayforsecs
+Say Nothing,
+Size,looks_size
+Backdrop Name,looks_backdropnumbername
+Align Scene (),
+Scroll Right (),
+Scroll Up (),
+Video () on (),
+() Sensor Value,
+Sensor ()?,
+Set () Effect to (),looks_seteffectto
+Replace Item () of () With (),
+Set Pen (color/sat/bright/trans) to (),pen_setPenColorParamTo
+Set Rotation Style (),motion_setrotationstyle
+Set Size to ()%,looks_setsizeto
+Set Tempo to () bpm,music_setTempo
+Set () to (),
+Turn Video (),videoSensing_videoOn
+Set Video Transparency to ()%,videoSensing_setVideoTransparency
+Set Volume to ()%,sound_setvolumeto
+Show,looks_show
+Show List (),
+Show Variable (),data_showvariable
+Loudness,
+Sqrt (),
+Stamp,pen_stamp
+Switch Backdrop to (),looks_switchbackdropto
+Switch Backdrop to () and Wait,
+Stop All,control_stop
+Stop All Sounds,sound_stopallsounds
+Stop (),
+Stop Sound (),
+Length of () (Operators block),
+Tempo,music_getTempo
+Think (),looks_think 
+Think () for () Secs,looks_thinkforsecs
+Current (),sensing_current
+Timer,sensing_timer
+Reset Timer,sensing_resettimer
+Days Since 2000,sensing_dayssince2000
+Touching ()?,sensing_touchingobject
+Touching Color ()?,sensing_touchingcolor
+Point Away From Edge,
+Turn () Degrees Right,motion_turnright
+Turn () Degrees Left,motion_turnleft
+Undefined,
+Volume,sound_volume
+Wait () Secs,control_wait
+All at Once,
+When This Sprite Clicked,event_whenthisspriteclicked
+When I Start as a Clone,control_start_as_clone
+When Green Flag Clicked,event_whenflagclicked
+When I Receive (),event_whenbroadcastreceived
+When () Key Pressed,event_whenkeypressed
+When Backdrop Switches to (),event_whenbackdropswitchesto
+When () is greater than (),event_whengreaterthan
+X Position,motion_xposition
+Set X to (),motion_setx
+X Scroll,
+Y Position,motion_yposition
+Set Y to (),motion_sety
+Y Scroll,
+Set Drag Mode,sensing_setdragmode
+Change Variable,data_changevariableby
+Change Sound Effect,sound_changeeffectby
+Set Sound Effect,sound_seteffectto
+Clear Sound Effects,sound_cleareffects
+Go Forward/Backward by Layers,looks_goforwardbackwardlayers
+Erase all (pen),pen_clear
+Define Block,procedures_definition
+Define(d) block,procedures_call
+When video motion > ,videoSensing_whenMotionGreaterThan
+Speak (),text2speech_speakAndWait
+set voice to (),text2speech_setVoice
+set language to (),text2speech_setLanguage
+translate () to (),translate_getTranslate
+language,translate_getViewerLanguage
+makey when () key pressed,makeymakey_whenMakeyKeyPressed
+makey when () key pressed in order,makeymakey_whenCodePressed
+when () button pressed,microbit_whenButtonPressed
+condition: when () button pressed,microbit_isButtonPressed
+when (moved/shaken/jumped),microbit_whenGesture
+display bit pattern,microbit_displaySymbol
+display text,microbit_displayText
+clear display,microbit_displayClear
+when tilted (),microbit_whenTilted
+tilted (),microbit_isTilted
+tilt angle (),microbit_getTiltAngle
+when pin () connected,microbit_whenPinConnected
+eve turn motor () this way for () seconds,ev3_motorTurnClockwise
+eve turn motor () that way for () seconds,ev3_motorTurnCounterClockwise
+eve motor () set power () %,ev3_motorSetPower
+eve motor () position,ev3_getMotorPosition
+eve when button () pressed,ev3_whenButtonPressed
+eve when distance less than (),ev3_whenDistanceLessThan
+wd turn motor () on for () seconds,wedo2_motorOnFor
+wd turn motor () on  ,wedo2_motorOn
+wd turn motor () off,wedo2_motorOff
+wd set motor () power to (),wedo2_startMotorPower
+wd set motor () direction to (),wedo2_setMotorDirection
+wd set light color to ,wedo2_setLightHue
+wd when distance () (),wedo2_whenDistance
+wd when tilted (),wedo2_whenTilted
+wd distance,wedo2_getDistance
+wd tilted () ?,wedo2_isTilted
+wd tilt angle () ,wedo2_getTiltAngle

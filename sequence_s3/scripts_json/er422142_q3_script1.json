@@ -1,3 +1,0 @@
-{u')WU!/stVb!gTZ8OO5p3k': {u'inputs': {}, u'parent': None, u'fields': {u'KEY_OPTION': [u'left arrow', None]}, u'next': u'/Y[bDq#5zDP+W?mCE]ik', u'topLevel': True, u'opcode': u'event_whenkeypressed', u'y': 335, u'x': 397, u'shadow': False}, u'/Y[bDq#5zDP+W?mCE]ik': {u'inputs': {u'MESSAGE': [1, [10, u'hello my name is Edwin']], u'SECS': [1, [4, u'2']]}, u'parent': u')WU!/stVb!gTZ8OO5p3k', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}}
-
-

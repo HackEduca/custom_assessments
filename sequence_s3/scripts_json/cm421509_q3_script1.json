@@ -1,3 +1,0 @@
-{u'iPy-eb:sZcedO9,/:)6F': {u'inputs': {u'MESSAGE': [1, [10, u'My favorite holiday is Christmas']], u'SECS': [1, [4, u'4']]}, u'parent': u'D$m4bcWmq`Tx`7O3KT]n', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}, u'D$m4bcWmq`Tx`7O3KT]n': {u'inputs': {}, u'parent': None, u'fields': {u'KEY_OPTION': [u'space', None]}, u'next': u'iPy-eb:sZcedO9,/:)6F', u'topLevel': True, u'opcode': u'event_whenkeypressed', u'y': 178, u'x': 194, u'shadow': False}}
-
-

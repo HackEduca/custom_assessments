@@ -1,3 +1,0 @@
-{u'1;xGqTXXaFh}2T0Z2W}@': {u'inputs': {}, u'parent': None, u'fields': {}, u'next': u'BPE|`f_=aU}JD(vxHxuz', u'topLevel': True, u'opcode': u'event_whenthisspriteclicked', u'y': -738, u'x': 210, u'shadow': False}, u'BPE|`f_=aU}JD(vxHxuz': {u'inputs': {u'MESSAGE': [1, [10, u'My favorite food is spaghetti ']], u'SECS': [1, [4, u'3']]}, u'parent': u'1;xGqTXXaFh}2T0Z2W}@', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}}
-
-

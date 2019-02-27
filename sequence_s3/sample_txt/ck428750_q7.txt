@@ -1,3 +1,0 @@
-{u'MmvTWT_3TR./u})fT+,V': {u'inputs': {}, u'parent': u'z;[15~m-[]EozFX**I{T', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_show', u'shadow': False}, u'z;[15~m-[]EozFX**I{T': {u'inputs': {}, u'parent': None, u'fields': {}, u'next': u'MmvTWT_3TR./u})fT+,V', u'topLevel': True, u'opcode': u'event_whenflagclicked', u'y': 53, u'x': 125, u'shadow': False}}
-
-

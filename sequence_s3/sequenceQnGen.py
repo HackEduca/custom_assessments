@@ -354,9 +354,8 @@ def main():
 					q3_file = open(filename,'w+')
 					print>>q3_file,question.scripts[i]
 					print>>q3_file,'\n'
-	print(q6_custom)
+	
 	for project in q6_custom:
-		print("!")
 		customize_q6(project)
 		filename = directory + project.username+'_q6.json'
 		q6_file = open(filename,'w+')

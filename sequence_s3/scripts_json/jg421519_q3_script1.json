@@ -1,3 +1,0 @@
-{u'L8ap/XU]qtw]!0EUK]Ep': {u'inputs': {u'MESSAGE': [1, [10, u'my favorite food is garlic bolone']], u'SECS': [1, [4, u'4']]}, u'parent': u'#|7R}i(}(6#$)R:4LrS)', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}, u'#|7R}i(}(6#$)R:4LrS)': {u'inputs': {}, u'parent': None, u'fields': {u'KEY_OPTION': [u'left arrow', None]}, u'next': u'L8ap/XU]qtw]!0EUK]Ep', u'topLevel': True, u'opcode': u'event_whenkeypressed', u'y': -643, u'x': -31, u'shadow': False}}
-
-

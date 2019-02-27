@@ -1,3 +1,0 @@
-{u'Ej+5#|S8?]Mng-F_59Gj': {u'inputs': {u'MESSAGE': [1, [10, u'I like to draw']], u'SECS': [1, [4, u'5']]}, u'parent': u'kUSE0;QjD1BFNj0b~.eP', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}, u'kUSE0;QjD1BFNj0b~.eP': {u'inputs': {}, u'parent': None, u'fields': {}, u'next': u'Ej+5#|S8?]Mng-F_59Gj', u'topLevel': True, u'opcode': u'event_whenthisspriteclicked', u'y': -559, u'x': 489, u'shadow': False}}
-
-

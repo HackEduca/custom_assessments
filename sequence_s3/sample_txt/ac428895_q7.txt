@@ -1,3 +1,0 @@
-{u'9e+-S#lB$vI.(n:fp2Zm': {u'inputs': {}, u'parent': None, u'fields': {}, u'next': u'Q9b)Zc@=T%dlODM0hnAY', u'topLevel': True, u'opcode': u'event_whenthisspriteclicked', u'y': 193, u'x': 32, u'shadow': False}, u'Q9b)Zc@=T%dlODM0hnAY': {u'inputs': {u'MESSAGE': [1, [10, u"My favorite sport is softball (yes I'm aware it's a tennis ball not a softball)"]], u'SECS': [1, [4, u'4']]}, u'parent': u'9e+-S#lB$vI.(n:fp2Zm', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}}
-
-

@@ -1,3 +1,0 @@
-{u'VnP.(1_$:O[n,Gc|nuts': {u'inputs': {u'MESSAGE': [1, [10, u'Hello! Press space to learn facts about me']], u'SECS': [1, [4, u'2']]}, u'parent': u'dn_ljzIjndK}xMTdvk3d', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}, u'dn_ljzIjndK}xMTdvk3d': {u'inputs': {}, u'parent': None, u'fields': {}, u'next': u'VnP.(1_$:O[n,Gc|nuts', u'topLevel': True, u'opcode': u'event_whenthisspriteclicked', u'y': 158, u'x': 470, u'shadow': False}}
-
-

@@ -1,3 +1,0 @@
-{u'zkivZekIDKbE#HF8r_KQ': {u'inputs': {}, u'parent': None, u'fields': {}, u'next': u'j.%#@QnfJI_%IHS`9nA$', u'topLevel': True, u'opcode': u'event_whenthisspriteclicked', u'y': 119, u'x': 260, u'shadow': False}, u'j.%#@QnfJI_%IHS`9nA$': {u'inputs': {u'MESSAGE': [1, [10, u'N!']], u'SECS': [1, [4, u'2']]}, u'parent': u'zkivZekIDKbE#HF8r_KQ', u'fields': {}, u'next': u'0SgXYPmjQ*9N-%~+N$i;', u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}, u'0SgXYPmjQ*9N-%~+N$i;': {u'inputs': {u'MESSAGE': [1, [10, u'JAIDEN!']], u'SECS': [1, [4, u'2']]}, u'parent': u'j.%#@QnfJI_%IHS`9nA$', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}}
-
-

@@ -1,3 +1,0 @@
-{u'181A_{Pu]dl)WS!w.:*=': {u'inputs': {}, u'parent': None, u'fields': {}, u'next': u'ebxyR!~W/Zd3*T_Artg|', u'topLevel': True, u'opcode': u'event_whenthisspriteclicked', u'y': -502, u'x': 593, u'shadow': False}, u'z0]B11E]jeYDSPwgg~iv': {u'inputs': {u'SOUND_MENU': [1, u'5q$IcXkhIuL~34}NR|=5']}, u'parent': u'ebxyR!~W/Zd3*T_Artg|', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'sound_playuntildone', u'shadow': False}, u'ebxyR!~W/Zd3*T_Artg|': {u'inputs': {u'SOUND_MENU': [1, u'Cp,x`L+.e}-R{5,^Qn#J']}, u'parent': u'181A_{Pu]dl)WS!w.:*=', u'fields': {}, u'next': u'z0]B11E]jeYDSPwgg~iv', u'topLevel': False, u'opcode': u'sound_playuntildone', u'shadow': False}}
-
-

@@ -1,3 +1,0 @@
-{u'i;DYReVZDIjBiLQtwl*:': {u'inputs': {}, u'parent': None, u'fields': {u'KEY_OPTION': [u'space', None]}, u'next': u'Bj/fXw2|*/+{y%1%@,md', u'topLevel': True, u'opcode': u'event_whenkeypressed', u'y': 304, u'x': 86, u'shadow': False}, u'O?,HB]f#{SauDyRx[=j[': {u'inputs': {}, u'parent': u'Bj/fXw2|*/+{y%1%@,md', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_hide', u'shadow': False}, u'Bj/fXw2|*/+{y%1%@,md': {u'inputs': {}, u'parent': u'i;DYReVZDIjBiLQtwl*:', u'fields': {}, u'next': u'O?,HB]f#{SauDyRx[=j[', u'topLevel': False, u'opcode': u'looks_show', u'shadow': False}}
-
-

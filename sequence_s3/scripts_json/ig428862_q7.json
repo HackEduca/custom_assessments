@@ -1,3 +1,0 @@
-{u'BHQAh)g,1U]gqGvN?,;K': {u'inputs': {u'MESSAGE': [1, [10, u'Hi my name is Isaiah this is about me']], u'SECS': [1, [4, u'7']]}, u'parent': u'x4#wUlv1}8uUx7eEE=-p', u'fields': {}, u'next': None, u'topLevel': False, u'opcode': u'looks_sayforsecs', u'shadow': False}, u'x4#wUlv1}8uUx7eEE=-p': {u'inputs': {}, u'parent': None, u'fields': {}, u'next': u'BHQAh)g,1U]gqGvN?,;K', u'topLevel': True, u'opcode': u'event_whenflagclicked', u'y': 153, u'x': 260, u'shadow': False}}
-
-

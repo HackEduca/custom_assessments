@@ -1,3 +1,0 @@
-{'|t8aA]$@rWg|sqH9aF*|': {'inputs': {}, 'opcode': 'event_whenkeypressed', 'x': 35, 'parent': None, 'topLevel': True, 'y': 288, 'fields': {'KEY_OPTION': ['space', None]}, 'shadow': False, 'next': '3_~E+N!i*F7k=nnDArGG'}, '3_~E+N!i*F7k=nnDArGG': {'inputs': {'SOUND_MENU': [1, '3j^lzgy/7HneNCgKcxB4']}, 'parent': '|t8aA]$@rWg|sqH9aF*|', 'fields': {}, 'next': None, 'topLevel': False, 'opcode': 'sound_playuntildone', 'shadow': False}, '3j^lzgy/7HneNCgKcxB4': {'inputs': {}, 'parent': '3_~E+N!i*F7k=nnDArGG', 'fields': {'SOUND_MENU': ['Drum', None]}, 'next': None, 'topLevel': False, 'opcode': 'sound_sounds_menu', 'shadow': True}}
-
-
