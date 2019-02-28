@@ -7,14 +7,17 @@ import json
 #Function to gather all the blocks from Scratch project's json
 #Takes in json data and returns a dictionary of blocks
 def get_blocks(jsonData):
-	projInfo = jsonData['targets']
-	allBlocks={}
-	for item in projInfo:
-		blocks = item['blocks']
-		for blockName in blocks:
-			blockInfo=blocks[blockName]
-			#Add to all blocks dictionary: key=blockName, value=blockInfo
-			allBlocks[blockName] = blockInfo
+	try:
+		projInfo = jsonData['targets']
+		allBlocks={}
+		for item in projInfo:
+			blocks = item['blocks']
+			for blockName in blocks:
+				blockInfo=blocks[blockName]
+				#Add to all blocks dictionary: key=blockName, value=blockInfo
+				allBlocks[blockName] = blockInfo
+	except:
+		allBlocks = {}
 	return allBlocks
 
 #Function to count the number of blocks of a certain opcode was used.

@@ -158,12 +158,16 @@ directory = "json_files/"
 files = find_files(directory)
 files.remove('.DS_Store')
 op_codes = co.clean_opcodes("opcodes.csv")
-script_directory = "scripts/"
 output_directory = "cleaned_json/"
+q7dict = {}
 for filename in files:
 	jsonfile = txtjson.txt_to_json(directory, output_directory, filename)
 	default_script = "script.js"
 	commands = parse_json(jsonfile)
 	scratchblocks_commands = parse_commands(commands)
-	create_script(script_directory, default_script, scratchblocks_commands, filename)
-	break
+	create_script("", default_script, scratchblocks_commands, filename)
+	if "q7" in filename:
+		n_commands = scratchblocks_commands.count("%0A")
+		q7dict[filename[:-5]] = n_commands
+with open("q7dict.json", "w") as outfile:
+	json.dump(q7dict, outfile)

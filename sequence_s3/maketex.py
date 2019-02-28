@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import json
 
 def all_users(filename):
 
@@ -11,7 +12,7 @@ def all_users(filename):
 	except:
 		return []
 
-def create_assessment(custom_directory, user, q3, q6, q7, img_dir, img_list):
+def create_assessment(custom_directory, user, q3, q6, q7, img_dir, img_list, q7dict):
 
 	custom_am = open(user+".tex", "w")
 	assessment = []
@@ -59,7 +60,15 @@ def create_assessment(custom_directory, user, q3, q6, q7, img_dir, img_list):
 		assessment.append(line)
 
 	# Question 7
-	q7f = open(custom_directory+"q7.tex")
+	q7counter = 0
+	if user+"_q7" in q7dict:
+		q7counter = q7dict[user+"_q7"]
+	if q7counter == 2:
+		q7f = open(custom_directory + "q7_1.tex")
+	elif q7counter == 3:
+		q7f = open(custom_directory + "q7_2.tex")
+	else:
+		q7f = open(custom_directory+"q7.tex")
 	q7lines = q7f.readlines()
 	if user in q7:
 		n_questions += " Q7"
@@ -113,12 +122,17 @@ all_students = all_users("students.csv")
 q3_students = all_users("q3_custom.csv")
 q6_students = all_users("q6_custom.csv")
 q7_students = all_users("q7_custom.csv")
+with open('q7dict.json') as q7jsonfile:
+	q7dict = json.load(q7jsonfile)
+print(q7dict)
 custom_directory = "custom_scratch3/"
 img_directory = "img_files"
 img_list = os.listdir(img_directory)
 if '.DS_Store' in img_list:
 	img_list.remove('.DS_Store')
+setstudents = set(all_students)
+print(len(setstudents))
 for student in all_students:
 	create_assessment(custom_directory, student, q3_students, 
-		q6_students, q7_students, img_directory, img_list)
+		q6_students, q7_students, img_directory, img_list, q7dict)
 
