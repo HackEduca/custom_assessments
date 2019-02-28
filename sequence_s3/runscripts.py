@@ -3,62 +3,71 @@ from subprocess import call
 import os
 import json
 import re
+import pandas as pd
 # import crop_img
 
-scratch_projects = ["https://scratch.mit.edu/studios/5831048/",
-"https://scratch.mit.edu/studios/5831042/",
-"https://scratch.mit.edu/studios/5830937/",
-"https://scratch.mit.edu/studios/5831053/",
-"https://scratch.mit.edu/studios/5831055/",
-"https://scratch.mit.edu/studios/5831059/",
-"https://scratch.mit.edu/studios/5831066/",
-"https://scratch.mit.edu/studios/5831076/",
+scratch_projects = [
 "https://scratch.mit.edu/studios/5752419/"]
 
-project_names = ["SES_Class 3A_(304-21)",
-"SES_Class_3B_(305-21)",
-"SES_Class_3C_(307-22)",
-"SES_Class_4A_(302-24)",
-"SES_Class_4B_(309-24)",
-"SES_Class_4C_(300-23*)",
-"SES_Class_5A_(311-23)",
-"SES_Class_5B_(312-23)",
+project_names = [
 "GP_3rd"]
 
-i = 0
+def find_users(filename):
+
+	try:
+		df = pd.read_csv(filename, header=None)
+		names = df.iloc[:,0]
+
+		return names.tolist()
+	except:
+		return []
+
+# Finished "https://scratch.mit.edu/studios/5831048/", "SES_Class 3A_(304-21)"
+# "https://scratch.mit.edu/studios/5831055/", "SES_Class_4B_(309-24)",
+# "https://scratch.mit.edu/studios/5831042/", "SES_Class_3B_(305-21)",
+# "https://scratch.mit.edu/studios/5830937/", "SES_Class_3C_(307-22)",
+# "https://scratch.mit.edu/studios/5831053/", "SES_Class_4A_(302-24)",
+# "https://scratch.mit.edu/studios/5831059/", "SES_Class_4C_(300-23*)",
+# "https://scratch.mit.edu/studios/5831066/", "SES_Class_5A_(311-23)",
+# "https://scratch.mit.edu/studios/5831076/", "SES_Class_5B_(312-23)",
+
 lsp = len(scratch_projects)
 
 for i in range(lsp):
+
 	project = scratch_projects[i]
 	# call(["python", "sequenceQnGen.py", project])
 
-	call(["python3", "parse_json.py"])
+	# call(["python3", "parse_json.py"])
 
-	img_directory = "img_files/"
+	# img_directory = "img_files/"
 
-	directory = "scripts/"
-	files = os.listdir(directory)
-	if '.DS_Store' in files:
-		files.remove('.DS_Store')
+	# directory = ""
+	# files = os.listdir(".")
+	# if '.DS_Store' in files:
+	# 	files.remove('.DS_Store')
 
-	c = 0
-	filedir = {}
-	for filename in files:
-		filedir[c] = filename
-		if filename[-3:] == ".js":
-			call(["node", directory + filename])
-			old_name = img_directory + "scratchblocks.png"
-			new_name = img_directory + filename[:-3] + ".png"
-			if "script" not in filename:
-				new_name = img_directory + filename[:-3] + "_script0" + ".png"
-			os.rename("..//../Downloads/scratchblocks.png", "img_files/scratchblocks.png")
-			os.rename(old_name, new_name)
-			call(["python3", "crop_img.py", new_name, img_directory])
-			1/0
-			c += 1
+	# c = 0
+	# filedir = {}
+	# for filename in files:
+	# 	filedir[c] = filename
+	# 	if filename[-3:] == ".js":
+	# 		call(["node", directory + filename])
+	# 		old_name = img_directory + "scratchblocks.png"
+	# 		new_name = img_directory + filename[:-3] + ".png"
+	# 		if "script" not in filename:
+	# 			new_name = img_directory + filename[:-3] + "_script0" + ".png"
+	# 		try:
+	# 			os.rename(old_name, new_name)
+	# 			call(["python3", "crop_img.py", new_name, img_directory])
+	# 		except:
+	# 			print(filename)
+	# 		c += 1
 
-	writedir = open(project_names[i] + "_filedirectory.json", "w")
-	writedir.write(json.dumps(filedir))
+	# writedir = open(project_names[i] + "_filedirectory.json", "w")
+	# writedir.write(json.dumps(filedir))
+
+	# break
 
 	call(["python3", "maketex.py"])
 
@@ -66,11 +75,11 @@ for i in range(lsp):
 	if '.DS_Store' in files:
 		files.remove('.DS_Store')
 
-	i = 0
+	j = 0
 	for filename in files:
 		if filename[-3:] == "tex":
 			call(["pdflatex", filename])
-			i += 1
+			j += 1
 
 	# Clean up
 	files = os.listdir('.')
@@ -82,13 +91,18 @@ for i in range(lsp):
 			pdflist.append(filename)
 
 	pdflist.append(project_names[i] + ".pdf")
+	call(pdflist)
 
-	file_extensions = ["tex", "aux", "log", "pdf"]
+	file_extensions = ["tex", "aux", "log", "pdf", ".js"]
 	archive = "archive/"
 	for filename in files:
 		file_type = filename[-3:]
 		if file_type in file_extensions:
-			os.rename(filename, archive + filename)
+			if filename != "script.js":
+				try:
+					os.rename(filename, archive + filename)
+				except:
+					continue
 
 	dir1 = 'json_files/'
 	files = os.listdir('./' + dir1)
@@ -118,5 +132,47 @@ for i in range(lsp):
 		files.remove('.DS_Store')
 	for filename in files:
 		os.rename(dir4 + filename, archive + filename)
+
+	dir5 = 'img_files/'
+	files = os.listdir('./' + dir5)
+	if '.DS_Store' in files:
+		files.remove('.DS_Store')
+	for filename in files:
+		os.rename(dir5 + filename, archive + filename)
+
+	allstudents = find_users("students.csv")
+	students3 = find_users("q3_custom.csv")
+	students6 = find_users("q6_custom.csv")
+	students7 = find_users("q7_custom.csv")
+
+	allstudents = set(allstudents)
+
+	studentdict = {}
+
+	for student in allstudents:
+		studentdict[student] = []
+
+	for s3 in students3:
+		studentdict[s3].append(3)
+
+	for s6 in students6:
+		studentdict[s6].append(6)
+
+	for s7 in students7:
+		studentdict[s7].append(7)
+
+	output = "Custom Questions\n"
+
+	for student in studentdict.keys():
+		questionlist = studentdict[student]
+		questionlist = set(questionlist)
+		qstr = ""
+		for questioncounter in questionlist:
+			qstr += str(questioncounter) + " "
+		output += student + " has custom questions for: " + qstr + "\n"
+
+	student_directory = open(project_names[i] + "_directory.txt", "w")
+	student_directory.write(output)
+	student_directory.close()
 
 	break

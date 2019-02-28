@@ -25,7 +25,7 @@ def parse_json(jsonfile):
 		try:
 			sbcode = op_codes[oc][0]
 		except:
-			continue
+			break
 		ipval = val['inputs']
 		if len(ipval) == 0:
 			ipval = None
@@ -87,8 +87,11 @@ def cm_input(val, inputs, delimiter):
 			elif inputval == "costume":
 				inputval = "costume v"
 			elif inputval is not None:
-				inputval = inputval.replace("(", " ")
-				inputval = inputval.replace(")", " ")
+				try:
+					inputval = inputval.replace("(", " ")
+					inputval = inputval.replace(")", " ")
+				except:
+					inputval = ""
 			else:
 				inputval = ""
 			result += v + delimiter + inputval
@@ -161,13 +164,16 @@ op_codes = co.clean_opcodes("opcodes.csv")
 output_directory = "cleaned_json/"
 q7dict = {}
 for filename in files:
-	jsonfile = txtjson.txt_to_json(directory, output_directory, filename)
-	default_script = "script.js"
-	commands = parse_json(jsonfile)
-	scratchblocks_commands = parse_commands(commands)
-	create_script("", default_script, scratchblocks_commands, filename)
-	if "q7" in filename:
-		n_commands = scratchblocks_commands.count("%0A")
-		q7dict[filename[:-5]] = n_commands
+	try:
+		jsonfile = txtjson.txt_to_json(directory, output_directory, filename)
+		default_script = "script.js"
+		commands = parse_json(jsonfile)
+		scratchblocks_commands = parse_commands(commands)
+		create_script("", default_script, scratchblocks_commands, filename)
+		if "q7" in filename:
+			n_commands = scratchblocks_commands.count("%0A")
+			q7dict[filename[:-5]] = n_commands
+	except:
+		continue
 with open("q7dict.json", "w") as outfile:
 	json.dump(q7dict, outfile)

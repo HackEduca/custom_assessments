@@ -113,6 +113,9 @@ def custom_question(qlines, user, img_directory, img_list):
 				newl = newl.replace("1cm", "0.5cm")
 				cust_q.append(newl)
 				img_counter += 1
+			else:
+				cust_q.append(l)
+			img_counter += 1
 		else:
 			cust_q.append(l)
 
