@@ -24,6 +24,8 @@ def create_assessment(custom_directory, user, q3, q6, q7, img_dir, img_list, q7d
 	for h in header:
 		if "Scratch Username: " in h:
 			username = h.split("Scratch Username: ")
+			if ("_" in user):
+				user = user.replace("_", "")
 			line = "Scratch Username: " + user + "\n"
 		else:
 			line = h

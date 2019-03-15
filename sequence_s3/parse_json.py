@@ -58,6 +58,14 @@ def parse_commands(commands):
 			result += partialresult
 		result += "%0A"
 
+	result = result.replace("Glide ()", "Glide (1)")
+	result = result.replace("X: () Y: ()", "X: (1) Y: (1)")
+	result = result.replace("Backdrop to ()", "Backdrop to (backdrop v)")
+	result = result.replace("Turn () Degrees Right", "Turn cw (10) degrees")
+	result = result.replace("Turn () Degrees Left", "Turn ccw (10) degrees")
+	result = result.replace("Ask ()", "Ask (Hi)")
+	result = result.replace("Change () Effect by ()", "Change (effect v) Effect by (1)")
+	result = result.replace("()", "(1)")
 	result = result.replace("(", "%5B")
 	result = result.replace(")", "%5D")
 	result = result.replace("For", " for")
@@ -159,7 +167,8 @@ def find_files(directory):
 
 directory = "json_files/"
 files = find_files(directory)
-files.remove('.DS_Store')
+if '.DS_Store' in files:
+	files.remove('.DS_Store')
 op_codes = co.clean_opcodes("opcodes.csv")
 output_directory = "cleaned_json/"
 q7dict = {}

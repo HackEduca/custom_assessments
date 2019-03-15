@@ -7,9 +7,11 @@ import pandas as pd
 # import crop_img
 
 scratch_projects = [
+"https://scratch.mit.edu/studios/5885889/"
 ]
 
 project_names = [
+"TCS-5B_(304)"
 ]
 
 def find_users(filename):
@@ -31,6 +33,23 @@ def find_users(filename):
 # "https://scratch.mit.edu/studios/5831066/", "SES_Class_5A_(311-23)",
 # "https://scratch.mit.edu/studios/5831076/", "SES_Class_5B_(312-23)",
 # "https://scratch.mit.edu/studios/5752419/", "GP_3rd"
+
+# 2
+# "AES-3A", "https://scratch.mit.edu/studios/5932307/"
+# "AES-3B", "https://scratch.mit.edu/studios/5928999/"
+# "AES-3C", "https://scratch.mit.edu/studios/5920444/"
+# "AES-3D", "https://scratch.mit.edu/studios/5995133/"
+# 2 (Santa Ana)
+# "https://scratch.mit.edu/studios/5839918/"
+# "santa_ana_1"
+
+# 3
+# "TCS-3A_(207)", "https://scratch.mit.edu/studios/5878374/"
+# "TCS-3B_(208)", "https://scratch.mit.edu/studios/5885890/"
+# "TCS-3C_(209)", "https://scratch.mit.edu/studios/5885892/"
+# "TCS-4A_(305)", "https://scratch.mit.edu/studios/5878375/"
+# "TCS-4B_(306)", "https://scratch.mit.edu/studios/5885896/"
+# "TCS-5A_(303)", "https://scratch.mit.edu/studios/5878376/"
 
 lsp = len(scratch_projects)
 
@@ -64,9 +83,6 @@ for i in range(lsp):
 			except:
 				print(filename)
 			c += 1
-
-	writedir = open(project_names[i] + "_filedirectory.json", "w")
-	writedir.write(json.dumps(filedir))
 
 	call(["python3", "maketex.py"])
 
