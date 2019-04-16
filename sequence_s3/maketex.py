@@ -129,14 +129,12 @@ q6_students = all_users("q6_custom.csv")
 q7_students = all_users("q7_custom.csv")
 with open('q7dict.json') as q7jsonfile:
 	q7dict = json.load(q7jsonfile)
-print(q7dict)
 custom_directory = "custom_scratch3/"
 img_directory = "img_files"
 img_list = os.listdir(img_directory)
 if '.DS_Store' in img_list:
 	img_list.remove('.DS_Store')
 setstudents = set(all_students)
-print(len(setstudents))
 for student in all_students:
 	create_assessment(custom_directory, student, q3_students, 
 		q6_students, q7_students, img_directory, img_list, q7dict)
