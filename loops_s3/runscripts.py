@@ -7,11 +7,11 @@ import pandas as pd
 # import crop_img
 
 scratch_projects = [
-
+"https://scratch.mit.edu/studios/5831066/"
 ]
 
 project_names = [
-
+"SES-5A"
 ]
 
 def find_users(filename):
@@ -30,40 +30,50 @@ def find_users(filename):
 # "AES-3D", "https://scratch.mit.edu/studios/6072916/"
 # "GP-3", "https://scratch.mit.edu/studios/7089624/"
 
+# 2
+# "SES-3A", "https://scratch.mit.edu/studios/5831048/"
+# "SES-3B", "https://scratch.mit.edu/studios/5831042/"
+# "SES-3C", "https://scratch.mit.edu/studios/5830937/"
+# "SES-4A", "https://scratch.mit.edu/studios/5831053/"
+# "SES-4B", "https://scratch.mit.edu/studios/5831055/"
+# "SES-4C", "https://scratch.mit.edu/studios/5831059/"
+# 
+# "SES-5B", "https://scratch.mit.edu/studios/5831076/"
+
 lsp = len(scratch_projects)
 
 for i in range(lsp):
 
 	project = scratch_projects[i]
-	call(["python", "loopQnGen.py", project])
+	# call(["python", "loopQnGen.py", project])
 
-	call(["python3", "parse_json.py"])
+	# call(["python3", "parse_json.py"])
 
-	img_directory = "img_files/"
+	# img_directory = "img_files/"
 
-	directory = ""
-	files = os.listdir(".")
-	if '.DS_Store' in files:
-		files.remove('.DS_Store')
+	# directory = ""
+	# files = os.listdir(".")
+	# if '.DS_Store' in files:
+	# 	files.remove('.DS_Store')
 
-	c = 0
-	filedir = {}
-	for filename in files:
-		filedir[c] = filename
-		if filename[-3:] == ".js":
-			call(["node", directory + filename])
-			old_name = img_directory + "scratchblocks.png"
-			new_name = img_directory + filename[:-3] + ".png"
-			if "script" not in filename:
-				new_name = img_directory + filename[:-3] + "_0_script0" + ".png"
-			try:
-				os.rename(old_name, new_name)
-				call(["python3", "crop_img.py", new_name, img_directory])
-			except:
-				print(filename)
-			c += 1
+	# c = 0
+	# filedir = {}
+	# for filename in files:
+	# 	filedir[c] = filename
+	# 	if filename[-3:] == ".js":
+	# 		call(["node", directory + filename])
+	# 		old_name = img_directory + "scratchblocks.png"
+	# 		new_name = img_directory + filename[:-3] + ".png"
+	# 		if "script" not in filename:
+	# 			new_name = img_directory + filename[:-3] + "_0_script0" + ".png"
+	# 		try:
+	# 			os.rename(old_name, new_name)
+	# 			call(["python3", "crop_img.py", new_name, img_directory])
+	# 		except:
+	# 			print(filename)
+	# 		c += 1
 
-	call(["python3", "maketex.py"])
+	# call(["python3", "maketex.py"])
 
 	files = os.listdir('.')
 	if '.DS_Store' in files:

@@ -186,6 +186,7 @@ def main():
 	while(r.status_code == 200):
 		studio_html = r.content
 		studio_parser = BeautifulSoup(studio_html, "html.parser")
+		username_set = set()
 
 
 		for project in studio_parser.find_all('li'):
@@ -195,34 +196,36 @@ def main():
 			#Pull out scratch username
 			scratch_username = span_string.split(">")[2]
 			scratch_username = scratch_username[0:len(scratch_username)-3]
-			
-			#Get project ID
-			proj_id = project.get('data-id')
+			if (scratch_username not in username_set):
+				username_set.add(scratch_username)
+				
+				#Get project ID
+				proj_id = project.get('data-id')
 
-			#Read json file from URL. Convert Scratch URL to Scratch API URL, then read file.
-			apiURL = sa.create_API_URL(proj_id)
-			json_stream = requests.get(apiURL, allow_redirects=True)
-			user_directory = "user_json_files/"
-			json_filename = user_directory + scratch_username+".json"
-			open(json_filename, 'wb').write(json_stream.content)
-			json_data= open(json_filename, "r")
-			data = json.load(json_data)
-			json_data.close()
+				#Read json file from URL. Convert Scratch URL to Scratch API URL, then read file.
+				apiURL = sa.create_API_URL(proj_id)
+				json_stream = requests.get(apiURL, allow_redirects=True)
+				user_directory = "user_json_files/"
+				json_filename = user_directory + scratch_username+".json"
+				open(json_filename, 'wb').write(json_stream.content)
+				json_data= open(json_filename, "r")
+				data = json.load(json_data)
+				json_data.close()
 
-			#Print to students.csv
-			studentInfoLine = scratch_username+","+"https://scratch.mit.edu/projects/"+proj_id+"/"
-			print>>studentInfo, studentInfoLine
+				#Print to students.csv
+				studentInfoLine = scratch_username+","+"https://scratch.mit.edu/projects/"+proj_id+"/"
+				print>>studentInfo, studentInfoLine
 
 
-			#Create a project object for this project
-			newProject = make_project(proj_id)
-			newProject.username = scratch_username
+				#Create a project object for this project
+				newProject = make_project(proj_id)
+				newProject.username = scratch_username
 
-			#Add project blocks 
-			newProject.blocks = nj.get_blocks(data)
+				#Add project blocks 
+				newProject.blocks = nj.get_blocks(data)
 
-			#Add project to the global list of projects
-			projects.append(newProject)
+				#Add project to the global list of projects
+				projects.append(newProject)
 
 		pageNum+=1
 		studio_api_url = sa.studio_to_API(studioURL,pageNum)
@@ -235,9 +238,6 @@ def main():
 
 	#Find projects with candidate code
 	for project in projects:
-		project.greenFlags= nj.find_blocks(project.blocks,'event_whenflagclicked')
-		project.spriteClickeds = nj.find_blocks(project.blocks,'event_whenthisspriteclicked')
-		project.keyPresseds = nj.find_blocks(project.blocks,'event_whenkeypressed')
 		project.loop = nj.find_blocks(project.blocks,'control_repeat')
 		if len(project.loop) > 0:
 			for block in project.loop:
@@ -249,7 +249,7 @@ def main():
 						q1_cands.add(project)
 						if lps >= 3:
 							q7_cands.add(project)
-					if lps >= 6:
+					if lps >= 2 and lps <= 6:
 						q8_cands.add(project)
 
 	#Decide which projects get custom code

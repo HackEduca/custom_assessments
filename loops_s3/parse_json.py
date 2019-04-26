@@ -48,7 +48,9 @@ def parse_commands(commands):
 
 	lencm = len(commands)
 	result = ""
-	result += commands[0] + "%0A"
+	result += commands[0] 
+	result = result.replace("%", "")
+	result += "%0A"
 
 	for i in range(1, lencm):
 		val = commands[i][0]
@@ -63,6 +65,8 @@ def parse_commands(commands):
 		else:
 			partialresult = fd_input(val, fields, "(")
 			result += partialresult
+		result = result.replace("%", "")
+		result = result.replace("0A", "%0A")
 		result += "%0A"
 
 	result = result.replace("Glide ()", "Glide (1)")
@@ -73,8 +77,8 @@ def parse_commands(commands):
 	result = result.replace("Ask ()", "Ask (Hi)")
 	result = result.replace("Change () Effect by ()", "Change (effect v) Effect by (1)")
 	result = result.replace("()", "(1)")
-	result = result.replace("(", "%5B")
-	result = result.replace(")", "%5D")
+	# result = result.replace("(", "%5B")
+	# result = result.replace(")", "%5D")
 	result = result.replace("For", " for")
 	result = result.replace("'m", " am")
 	result = result.replace("t's", "t is")
