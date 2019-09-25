@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.29)  8 FEB 2019 14:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.29)  25 SEP 2019 12:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -517,7 +517,7 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@loff=\dimen131
 \@vwid@roff=\dimen132
 ))
-No file spanish_sequence.aux.
+(./spanish_sequence.aux)
 \openout1 = `spanish_sequence.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -532,6 +532,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -734,14 +735,14 @@ File: images/q3_script2.png Graphic file (type png)
 Package pdftex.def Info: images/q3_script2.png used on input line 51.
 (pdftex.def)             Requested size: 78.2923pt x 98.86913pt.
 
-<images/q3_script3.png, id=10, 210.7875pt x 197.73875pt>
+<images/q3_script3.png, id=10, 238.8925pt x 234.8775pt>
 File: images/q3_script3.png Graphic file (type png)
 
 <use images/q3_script3.png>
 Package pdftex.def Info: images/q3_script3.png used on input line 52.
-(pdftex.def)             Requested size: 105.3935pt x 98.86913pt.
+(pdftex.def)             Requested size: 107.50063pt x 105.6939pt.
 
-Overfull \hbox (1.17451pt too wide) in paragraph at lines 49--53
+Overfull \hbox (3.28165pt too wide) in paragraph at lines 49--53
 [][]   []   []   []
  []
 
@@ -756,35 +757,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--53
 ./images/q1_script1.png> <./images/q1_script2.png> <./images/q1_script3.png> <.
 /images/q2_script0.png> <./images/q3_script0.png> <./images/q3_script1.png> <./
 images/q3_script2.png> <./images/q3_script3.png>]
-<images/q4_stage.png, id=27, 471.7625pt x 324.21124pt>
+<images/q4_stage.png, id=26, 471.7625pt x 324.21124pt>
 File: images/q4_stage.png Graphic file (type png)
 
 <use images/q4_stage.png>
 Package pdftex.def Info: images/q4_stage.png used on input line 58.
 (pdftex.def)             Requested size: 235.88066pt x 162.10522pt.
 
-<images/q4_script0.png, id=28, 234.8775pt x 123.46124pt>
+<images/q4_script0.png, id=27, 234.8775pt x 123.46124pt>
 File: images/q4_script0.png Graphic file (type png)
 
 <use images/q4_script0.png>
 Package pdftex.def Info: images/q4_script0.png used on input line 62.
 (pdftex.def)             Requested size: 117.43846pt x 61.73045pt.
 
-<images/q4_script1.png, id=29, 225.84375pt x 121.45375pt>
+<images/q4_script1.png, id=28, 225.84375pt x 121.45375pt>
 File: images/q4_script1.png Graphic file (type png)
 
 <use images/q4_script1.png>
 Package pdftex.def Info: images/q4_script1.png used on input line 63.
 (pdftex.def)             Requested size: 112.92159pt x 60.72672pt.
 
-<images/q4_script2.png, id=30, 167.62625pt x 90.3375pt>
+<images/q4_script2.png, id=29, 167.62625pt x 90.3375pt>
 File: images/q4_script2.png Graphic file (type png)
 
 <use images/q4_script2.png>
 Package pdftex.def Info: images/q4_script2.png used on input line 64.
 (pdftex.def)             Requested size: 117.33755pt x 63.23581pt.
 
-<images/q4_script3.png, id=31, 168.63pt x 93.34875pt>
+<images/q4_script3.png, id=30, 168.63pt x 93.34875pt>
 File: images/q4_script3.png Graphic file (type png)
 
 <use images/q4_script3.png>
@@ -817,14 +818,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--75
 
  []
 
-<images/q5_script0.png, id=32, 400.49625pt x 213.79875pt>
+<images/q5_script0.png, id=31, 400.49625pt x 213.79875pt>
 File: images/q5_script0.png Graphic file (type png)
 
 <use images/q5_script0.png>
 Package pdftex.def Info: images/q5_script0.png used on input line 80.
 (pdftex.def)             Requested size: 200.24763pt x 106.89911pt.
 
-<images/q5_script1.png, id=33, 397.485pt x 212.795pt>
+<images/q5_script1.png, id=32, 397.485pt x 212.795pt>
 File: images/q5_script1.png Graphic file (type png)
 
 <use images/q5_script1.png>
@@ -842,7 +843,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--97
 
  []
 
-<images/q6_script0.png, id=41, 376.40625pt x 211.79124pt>
+<images/q6_script0.png, id=40, 376.40625pt x 211.79124pt>
 File: images/q6_script0.png Graphic file (type png)
 
 <use images/q6_script0.png>
@@ -868,7 +869,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--104
 
  []
 
-<images/q7_script0.png, id=42, 348.30125pt x 197.73875pt>
+<images/q7_script0.png, id=41, 348.30125pt x 197.73875pt>
 File: images/q7_script0.png Graphic file (type png)
 
 <use images/q7_script0.png>
@@ -902,8 +903,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--124
 [3 <./images/q6_script0.png> <./images/q7_script0.png>] (./spanish_sequence.aux
 ) ) 
 Here is how much of TeX's memory you used:
- 3736 strings out of 493029
- 52621 string characters out of 6136234
+ 3738 strings out of 493029
+ 52663 string characters out of 6136234
  128881 words of memory out of 5000000
  7185 multiletter control sequences out of 15000+600000
  7904 words of font info for 28 fonts, out of 8000000 for 9000
@@ -911,9 +912,9 @@ Here is how much of TeX's memory you used:
  38i,7n,43p,255b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on spanish_sequence.pdf (3 pages, 329268 bytes).
+Output written on spanish_sequence.pdf (3 pages, 305484 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
+ 55 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
